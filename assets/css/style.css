@@ -8,6 +8,7 @@
 
     --police-titre: "Irish Grover", serif;
     --police-texte: "Kanit", serif;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 * {
