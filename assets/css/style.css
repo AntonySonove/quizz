@@ -1,3 +1,6 @@
+@import url(accueil-search.css);
+@import url(accueil-quiz.css);
+@import url(statistique.css);
 
 :root {
     --violet: #46178F;
@@ -21,7 +24,7 @@
 
 html, body {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background: url(../img/img_background/bgviolet.webp) no-repeat center bottom;
     background-size: cover;
 }
