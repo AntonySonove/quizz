@@ -1,0 +1,54 @@
+/* SECTION SEARCH BAR */
+
+.search-container {
+    margin-top: 50px;
+    height: 200px;
+    width: 100vw;
+    background: url(../img/img_background/bgloupe.webp) center;
+    background-size: contain;
+    background-color: var(--jaune);
+}
+
+.search-container-flex {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 800px;
+    margin: auto;
+}
+
+.search-container-flex__title {
+    font-size: 30px;
+}
+
+.search-container__nav-bar-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container__search-bar {
+    width: 800px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    box-shadow: var(--shadow);
+    font-family: var(--police-texte);
+}
+
+.search-container__search-bar:focus {
+    border: none;
+}
+
+.search-container__icon-container {
+    background-color: var(--violet);
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    box-shadow: var(--shadow);
+}
+
+.search-container__icon-container-icon {
+    height: 16px;
+}
