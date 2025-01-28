@@ -1,3 +1,5 @@
+@import url(accueil-search.css);
+@import url(accueil-quiz.css);
 
 :root {
     --violet: #46178F;
