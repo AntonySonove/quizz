@@ -1,5 +1,5 @@
-
-
+@import url(accueil.css);
+@import url(statistique.css);
 :root {
     --violet: #46178F;
     --jaune: #f9d805;
