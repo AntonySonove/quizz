@@ -1,0 +1,11 @@
+table{
+    display: flex;
+    text-align: center;
+    width: 800px;
+}
+th{
+    background-color: var(--jaune);
+}
+td{
+    background-color: var(--gris-clair);
+}

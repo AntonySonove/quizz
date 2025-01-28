@@ -1,0 +1,51 @@
+
+:root {
+    --violet: #46178F;
+    --jaune: #f9d805;
+    --gris-clair: #f2f2f2;
+    --gris-fonce: #4D4D4D;
+
+    --police-titre: "Irish Grover", serif;
+    --police-texte: "Kanit", serif;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--police-titre);
+    color: var(--violet);
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/img_background/bgviolet.webp) no-repeat center bottom;
+    background-size: cover;
+}
+
+header {
+    width: 100vw;
+    height: 180px;
+    background-color: var(--gris-clair);
+}
+
+.nav-container {
+    margin: 0 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 40px;
+}
+
+.nav-list {
+    margin-top: 90px;
+    display: flex;
+    gap: 50px;
+    font-size: 24px;
+}
