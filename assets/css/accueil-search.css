@@ -5,7 +5,7 @@
     height: 200px;
     width: 100vw;
     background: url(../img/img_background/bgloupe.webp) center;
-    background-size: contain;
+    background-size: cover;
     background-color: var(--jaune);
 }
 
