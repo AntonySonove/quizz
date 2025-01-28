@@ -23,7 +23,7 @@
 
 html, body {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background: url(../img/img_background/bgviolet.webp) no-repeat center bottom;
     background-size: cover;
 }

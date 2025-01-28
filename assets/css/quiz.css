@@ -1,8 +1,136 @@
-main{
-    margin-right: 10%;
-    margin-left: 10%;;
+.kanit{
+    font-family: var(--police-texte);
 }
-#main__question{
+
+.padding2{
+    padding: 2% 2%;
+}
+
+
+.column{
     display: flex;
-    background-color: white;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+}
+
+
+.spaceBetween{
+    justify-content: space-between;
+}
+.justifyCenter{
+    justify-content: center;
+}
+.textCenter{
+    text-align: center;
+}
+.alignCenter{
+    align-items: center;
+}
+.alignSelf{
+    align-self: center;
+}
+
+
+.gap15{
+    gap: 15px;
+}
+.gap20{
+    gap: 20px;
+}
+
+
+.radius10{
+    border-radius: 10px;
+}
+.radius5{
+    border-radius: 5px;
+    border: 0px;
+}
+.leftRadius{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+
+.yellow{
+    background-color: var(--jaune);
+}
+
+.dropShadow{
+    box-shadow: var(--shadow);
+}
+
+
+.textWhite{
+    color: white;
+}
+.text25{
+    font-size: 25px;
+}
+.text35{
+    font-size: 35px;
+}
+.text50{
+    font-size: 50px;
+}
+
+.relative50{
+    position:relative;
+    bottom: 50px;
+}
+.relative-50{
+    position:relative;
+    bottom: -50px;
+}
+
+
+.mainQuiz{
+    margin: 5% 15%
+    
+}
+.mainQuestion{
+    background-color: var(--gris-clair);
+    text-align: center;
+    padding: 2% 2%
+}
+.divQuestion1On10{
+    width: 20%;
+    height:60px;
+}
+.divQuestion{
+    width: 70%;
+    margin-bottom: 80px;
+}
+.divAnswerButton{
+    width: 45%;
+}
+.AnswerButton{
+    height:60px;
+    background-color: var(--jaune);
+    width: 100%;
+}
+.violetCircle{
+    background-color: var(--violet);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goAnswer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.goAnswerButton{
+    width: 50%;
+    margin-top: 30px;
+}
+.divImgQuiz{
+    border: solid 3px var(--jaune);
+    width: 55%;
+    height: 300px;
 }
