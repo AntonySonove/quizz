@@ -6,7 +6,7 @@
     padding-bottom: 15px;
     font-size: 30px;
 }
-.maincontainer__statistique__tableauxglobal, .maincontainer__statistique__tableauxtheme{
+.maincontainer__statistique__tableauxglobal, .maincontainer__statistique__tableauxquizz, .maincontainer__statistique__tableauxbytheme{
     display: flex;
     justify-content: center;
     text-align: center;
