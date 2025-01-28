@@ -11,6 +11,11 @@
     background-color: var(--gris-clair);
     border-radius: 10px;
     padding: 10px;
+    transition: 0.3s;
+}
+
+.quiz-card:hover {
+    transform: scale(1.05);
 }
 
 .quiz-card__img {
@@ -29,7 +34,12 @@
 
 .quiz-card__classification-item {
     display: flex;
+    align-items: center;
     gap: 10px;
+
+    img {
+        height: 16px;
+    }
 
     p {
         font-family: var(--police-texte);
