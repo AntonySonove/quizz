@@ -39,6 +39,9 @@
 .gap20{
     gap: 20px;
 }
+.gap25{
+    gap: 20px;
+}
 
 
 .radius10{
@@ -106,10 +109,24 @@
 .divAnswerButton{
     width: 45%;
 }
-.AnswerButton{
-    height:60px;
+.answerButton{
+    height: 60px;
     background-color: var(--jaune);
     width: 100%;
+    cursor: pointer;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+.answerButton:hover{
+    background-color: var(--jaune-hover);
+}
+.answerButtonSelected{
+    height: 60px;
+    background-color: var(--jaune-selected);
+    width: 100%;
+    cursor: pointer;
+    padding-right: 5px;
+    transition: 0.3s;
 }
 .violetCircle{
     background-color: var(--violet);
@@ -119,6 +136,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5px;
 }
 .goAnswer{
     width: 100%;
