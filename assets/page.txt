@@ -1,0 +1,27 @@
+api utilisateur{id , email , nom , prénom , avatar}
+api catégorie {id , titre}
+api question {id , titre , description , value , answer{2 ou 4}
+
+
+
+
+page
+
+page d'acceuil connecter et non connecter (api catégorie)
+connexion(regex)
+mdp oublié (regex)
+créer un compte (regex)
+confirmation par e-mail
+modif infos (regex)
+profil utilisateur (api utilisateur)
+description quizz connecter et non connecter (écrit en dur)
+Quizz (api question)
+Résultat quizz non connecté et connecté (écrit en dur)
+
+
+
+si inner.HTML DOMPURIFY
+
+
+page fini
+stat (ecrit en dur pour le moment)

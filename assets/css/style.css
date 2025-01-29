@@ -4,7 +4,7 @@
 @import url(seconnecter.css);
 @import url(quiz.css);
 @import url(statistique.css);
-
+@import url(modif-info.css);
 :root {
     --violet: #46178F;
     --jaune: #f9d805;
