@@ -39,7 +39,7 @@ contactApi1();
  
 const contactApi2 = async () => {
     try {
-        const recupApi = await fetch('https://quizz.adrardev.fr/api/me ');
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/me');
         console.log(recupApi);
         if (!recupApi.ok || recupApi.status !== 200) {
             console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
@@ -101,6 +101,9 @@ const contactApi4 = async () => {
     }
 };
 contactApi4();
+
+
+
 
 const contactApi5 = async () => {
     try {
