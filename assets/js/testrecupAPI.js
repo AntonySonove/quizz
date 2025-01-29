@@ -1,17 +1,131 @@
 
 
+const contactApi = async () => {
+    try {
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/question/all');
+        console.log(recupApi);
+        if (!recupApi.ok || recupApi.status !== 200) {
+            console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
+            return;
+        }
 
+        const transformedData = await recupApi.json();
+        console.log(transformedData);
 
-const contactApi =  async () => {
-    //Data va récup Toutes les données de l'api
-    const response = await fetch('https://quizz.adrardev.fr/api/quizz/1');//await permet de faire notre fonction en mode asynchrone cela permet d'avoir une réponse et non une promesse
-    console.log(response);
-    console.log(response.ok);
-    console.log(response.status);
-    //Plutôt que de Travailler sur la réponse, on va la transformé en objet JS 
-    const dataTransformed = await response.json();  //on va traduire le json en js en await pour attendre qu'il est bien terminer de transformer avant de passer a la suite
-    console.log(dataTransformed);
-    console.log(dataTransformed.elevation);
-    apiDiv.innerText = dataTransformed.latitude + ' ' + dataTransformed.longitude;
+        
+        
+        
+    } catch (error) {
+        console.error("Erreur lors de l'appel à l'API : ", error);
+    }
 };
 contactApi();
+
+ 
+const contactApi1 = async () => {
+    try {
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/category/all');
+        console.log(recupApi);
+        if (!recupApi.ok || recupApi.status !== 200) {
+            console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
+            return;
+        }
+
+        const transformedData = await recupApi.json();
+        console.log(transformedData);
+
+        
+        
+        
+    } catch (error) {
+        console.error("Erreur lors de l'appel à l'API : ", error);
+    }
+};
+contactApi1();
+
+ 
+const contactApi2 = async () => {
+    try {
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/me ');
+        console.log(recupApi);
+        if (!recupApi.ok || recupApi.status !== 200) {
+            console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
+            return;
+        }
+
+        const transformedData = await recupApi.json();
+        console.log(transformedData);
+
+        
+        
+        
+    } catch (error) {
+        console.error("Erreur lors de l'appel à l'API : ", error);
+    }
+};
+contactApi2();
+
+
+
+const contactApi3 = async () => {
+    try {
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/login_check  ');
+        console.log(recupApi);
+        if (!recupApi.ok || recupApi.status !== 200) {
+            console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
+            return;
+        }
+
+        const transformedData = await recupApi.json();
+        console.log(transformedData);
+
+        
+        
+        
+    } catch (error) {
+        console.error("Erreur lors de l'appel à l'API : ", error);
+    }
+};
+contactApi3();
+
+const contactApi4 = async () => {
+    try {
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/users   ');
+        console.log(recupApi);
+        if (!recupApi.ok || recupApi.status !== 200) {
+            console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
+            return;
+        }
+
+        const transformedData = await recupApi.json();
+        console.log(transformedData);
+
+        
+        
+        
+    } catch (error) {
+        console.error("Erreur lors de l'appel à l'API : ", error);
+    }
+};
+contactApi4();
+
+const contactApi5 = async () => {
+    try {
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/user');
+        console.log(recupApi);
+        if (!recupApi.ok || recupApi.status !== 200) {
+            console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
+            return;
+        }
+
+        const transformedData = await recupApi.json();
+        console.log(transformedData);
+
+        
+        
+        
+    } catch (error) {
+        console.error("Erreur lors de l'appel à l'API : ", error);
+    }
+};
+contactApi5();
