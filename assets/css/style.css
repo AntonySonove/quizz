@@ -3,6 +3,7 @@
 @import url(description-quiz.css);
 @import url(seconnecter.css);
 @import url(quiz.css);
+@import url(statistique.css);
 
 :root {
     --violet: #46178F;
