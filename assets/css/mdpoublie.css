@@ -1,0 +1,17 @@
+.cadre-login__mdpoublie {
+    background-color: var(--gris-clair);
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 550px;
+    height: 339px;
+    padding: 20px;
+    margin : auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 300px;
+}
+
+.cadre-login__mdpoublie__soustitre {
+    padding : 50px;
+}
