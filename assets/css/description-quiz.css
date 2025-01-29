@@ -16,17 +16,12 @@
     box-shadow: var(--shadow);
 }
 
-.description-classification {
-    display: flex;
-    gap: 100px;
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-
 .description-classification-item {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 
     img {
         height: 20px;
