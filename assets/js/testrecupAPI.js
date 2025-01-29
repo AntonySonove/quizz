@@ -1,5 +1,3 @@
-
-
 const contactApi = async () => {
     try {
         const recupApi = await fetch('https://quizz.adrardev.fr/api/question/all');
@@ -8,13 +6,8 @@ const contactApi = async () => {
             console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
             return;
         }
-
         const transformedData = await recupApi.json();
         console.log(transformedData);
-
-        
-        
-        
     } catch (error) {
         console.error("Erreur lors de l'appel à l'API : ", error);
     }
