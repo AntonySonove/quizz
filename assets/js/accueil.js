@@ -16,7 +16,6 @@ const cardsHome = async () => {
         const transformedData = await recupApi.json();
         selectTitles(transformedData);
         createCards(cards)
-
     } catch (error) {
         console.error("Erreur lors de l'appel à l'API : ", error);
     }
@@ -35,7 +34,8 @@ function createCards(array) {
     array.forEach((item) => {
         let newCard = document.createElement('a');
         quizContainer.appendChild(newCard);
-        newCard.setAttribute('href', '#')
+        // newCard.setAttribute('href', 'assets/pages/description-quiz.html');
+        newCard.classList.add('quiz-card-container')
 
         newCard.innerHTML = `
         <article class="quiz-card">
@@ -74,3 +74,24 @@ function selectCategories(data) {
         newCategory.innerText = item.title;
     })
 }
+
+
+// CREATE DESCRIPTION-QUIZ PAGE
+
+const descriptionTitle = document.querySelector('.description-title');
+
+quizContainer.addEventListener('click', (e) => {
+    if (e.target.parentElement.classList.contains('quiz-card-container')) {
+        console.log(e.target.querySelector('.quiz-card__title').innerText);
+        sessionStorage.setItem("quiz", e.target.querySelector('.quiz-card__title').innerText);
+
+        
+    }
+    if (e.target.parentElement.parentElement.classList.contains('quiz-card-container')) {
+        if (e.target.classList.contains('quiz-card__title')) {
+            console.log(e.target.innerText)
+        } else {
+            console.log(e.target.parentElement.querySelector('.quiz-card__title').innerText)
+        }
+    }
+})
