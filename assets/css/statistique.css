@@ -1,11 +1,29 @@
-table{
-    display: flex;
+.maincontainer__statistique__title{
+    color: var(--jaune);
+    font-family: var(--police-titre);
     text-align: center;
-    width: 800px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-size: 30px;
 }
-th{
-    background-color: var(--jaune);
+.maincontainer__statistique__tableauxglobal, .maincontainer__statistique__tableauxquizz, .maincontainer__statistique__tableauxbytheme{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    th{
+        background-color: var(--jaune);
+        border: solid 1px white;
+        padding: 10px 30px;
+        font-size: 25px;
+    }
+    td{
+        background-color: var(--gris-clair);
+        border: solid 1px white;
+        padding: 10px;
+        font-size: 25px;
+    }
 }
-td{
-    background-color: var(--gris-clair);
+footer{
+    margin-top: 20px;
 }
