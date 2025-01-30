@@ -1,3 +1,4 @@
+let theQuiz=8;
 //! récupération de l'API pour les questions
 const contactApi10 = async () => {
     try {
@@ -8,32 +9,32 @@ const contactApi10 = async () => {
             return;
         }
         const transformedData = await recupApi.json();
-        // console.log(transformedData);
-        // console.log(transformedData[8]);
+        console.log(transformedData);
+        // console.log(transformedData[theQuiz]);
         //! récupération des données pour les questions et réponses
         //* question 1
-        console.log(transformedData[8].questions); //? liste des questions
-        // console.log(transformedData[8].questions.length);
-        // console.log(transformedData[8].questions[0].description); //? nom de la question
-        // console.log(transformedData[8].questions[0].answers);//? liste des réponses
-        // console.log(transformedData[8].questions[0].answers[0]); //? utiliser "valid" pour le compteur de bonnes réponses
-        // console.log(transformedData[8].questions[0].answers[0].valid); //? valeur true pour la bonne réponse
-        // console.log(transformedData[8].questions[0].answers[0].text); //? texte de la bonne réponse
+        console.log(transformedData[theQuiz].questions); //? liste des questions
+        // console.log(transformedData[theQuiz].questions.length);
+        // console.log(transformedData[theQuiz].questions[0].description); //? nom de la question
+        // console.log(transformedData[theQuiz].questions[0].answers);//? liste des réponses
+        // console.log(transformedData[theQuiz].questions[0].answers[0]); //? utiliser "valid" pour le compteur de bonnes réponses
+        // console.log(transformedData[theQuiz].questions[0].answers[0].valid); //? valeur true pour la bonne réponse
+        // console.log(transformedData[theQuiz].questions[0].answers[0].text); //? texte de la bonne réponse
         // //* question 2
-        // console.log(transformedData[8].questions[1].description);
-        // console.log(transformedData[8].questions[1].answers);
-        // console.log(transformedData[8].questions[1].answers[0]);
-        // console.log(transformedData[8].questions[1].answers[0].text);
+        // console.log(transformedData[theQuiz].questions[1].description);
+        // console.log(transformedData[theQuiz].questions[1].answers);
+        // console.log(transformedData[theQuiz].questions[1].answers[0]);
+        // console.log(transformedData[theQuiz].questions[1].answers[0].text);
         // //* question 3
-        // console.log(transformedData[8].questions[2].description);
-        // console.log(transformedData[8].questions[2].answers);
-        // console.log(transformedData[8].questions[2].answers[2]);
-        // console.log(transformedData[8].questions[2].answers[2].text);
+        // console.log(transformedData[theQuiz].questions[2].description);
+        // console.log(transformedData[theQuiz].questions[2].answers);
+        // console.log(transformedData[theQuiz].questions[2].answers[2]);
+        // console.log(transformedData[theQuiz].questions[2].answers[2].text);
         // //* question 4
-        // console.log(transformedData[8].questions[3].description);
-        // console.log(transformedData[8].questions[3].answers);
-        // console.log(transformedData[8].questions[3].answers[3]);
-        // console.log(transformedData[8].questions[3].answers[3].text);
+        // console.log(transformedData[theQuiz].questions[3].description);
+        // console.log(transformedData[theQuiz].questions[3].answers);
+        // console.log(transformedData[theQuiz].questions[3].answers[3]);
+        // console.log(transformedData[theQuiz].questions[3].answers[3].text);
        
         
         //! variables
@@ -52,7 +53,7 @@ const contactApi10 = async () => {
         //* variable pour les questions
         const questionNumber= document.getElementById("questionNumber");
         const questionName=document.getElementById("questionName");
-        let questionNumberCount=transformedData[8].questions.length-transformedData[8].questions.length+1;
+        let questionNumberCount=transformedData[theQuiz].questions.length-transformedData[theQuiz].questions.length+1;
         const textAnswerA=document.getElementById("textAnswerA");
         const textAnswerB=document.getElementById("textAnswerB");
         const textAnswerC=document.getElementById("textAnswerC");
@@ -61,20 +62,40 @@ const contactApi10 = async () => {
         const result=document.getElementById("result");
         let score=0;
         const resultContainer=document.getElementById("resultContainer");
-        resultContainer.classList.add("resultContainerNone");
+        const textResult= document.getElementById("text-result");
+        resultContainer.style.display="none";
         
         //! application des question/réponses sur le html
         function nextQuestion(next){
-            if (next==transformedData[8].questions.length){
-                result.innerText=`${score}/${transformedData[8].questions.length}`;
+            if (next==transformedData[theQuiz].questions.length){
+                let newScore=0;
+                newScore+=(score*100)/transformedData[theQuiz].questions.length;
+                newScore/=10
+                resultContainer.style.display="block";
+                result.innerText=`${newScore}/10`;
+                if(newScore<=3){
+                    textResult.innerText=`Ne vous découragez pas! Chaque erreur est une occasion d’apprendre. Rejouez et montrez de quoi vous êtes capable!`
+                }
+                if(newScore>3 && newScore<=5){
+                    textResult.innerText=`Pas mal, vous êtes sur la bonne voie ! Continuez et vous ferez des étincelles la prochaine fois!`
+                }
+                if(newScore>5 && newScore<=7){
+                    textResult.innerText=`Bien joué ! Vous êtes déjà au-dessus de la moyenne. Un petit effort de plus et vous toucherez l’excellence!`
+                }
+                if(newScore>7 && newScore<=9){
+                    textResult.innerText=`Bravo! Vous avez presque tout juste, votre score est impressionnant. Encore un tout petit effort pour atteindre le sommet!`
+                }
+                if(newScore>9){
+                    textResult.innerText=`Exceptionnel ! Vous avez fait un sans-faute. Vous êtes un véritable champion, rien ne vous arrête!`
+                }
             }
             else{
-            questionNumber.innerText=`${questionNumberCount}/${transformedData[8].questions.length}`
-            questionName.innerText=transformedData[8].questions[next].description;
-            textAnswerA.innerText=transformedData[8].questions[next].answers[0].text;
-            textAnswerB.innerText=transformedData[8].questions[next].answers[1].text;
-            textAnswerC.innerText=transformedData[8].questions[next].answers[2].text;
-            textAnswerD.innerText=transformedData[8].questions[next].answers[3].text;
+            questionNumber.innerText=`${questionNumberCount}/${transformedData[theQuiz].questions.length}`
+            questionName.innerText=transformedData[theQuiz].questions[next].description;
+            textAnswerA.innerText=transformedData[theQuiz].questions[next].answers[0].text;
+            textAnswerB.innerText=transformedData[theQuiz].questions[next].answers[1].text;
+            textAnswerC.innerText=transformedData[theQuiz].questions[next].answers[2].text;
+            textAnswerD.innerText=transformedData[theQuiz].questions[next].answers[3].text;
             }
         }
         //! Fonctions pour le visuel d'une réponse sélectionnée
@@ -148,44 +169,47 @@ const contactApi10 = async () => {
             answerButtonSelectedB.classList.remove("wrongAnswer");
             answerButtonSelectedC.classList.remove("wrongAnswer");
             answerButtonSelectedD.classList.remove("wrongAnswer");
-            if (transformedData[8].questions[next].answers[0].valid==true){
+            // for(let i=0;i<transformedData[theQuiz].questions.length;i++){
+
+            // }
+            if (transformedData[theQuiz].questions[next].answers[0].valid==true){
                 answerButtonSelectedA.classList.add("rightAnswer");
                 if(selectCountA==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[8].questions[next].answers[0].valid==false && selectCountA==1){
+            if (transformedData[theQuiz].questions[next].answers[0].valid==false && selectCountA==1){
                 answerButtonSelectedA.classList.add("wrongAnswer");
             }
-            if (transformedData[8].questions[next].answers[1].valid==true){
+            if (transformedData[theQuiz].questions[next].answers[1].valid==true){
                 answerButtonSelectedB.classList.add("rightAnswer");
                 if(selectCountB==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[8].questions[next].answers[1].valid==false && selectCountB==1){
+            if (transformedData[theQuiz].questions[next].answers[1].valid==false && selectCountB==1){
                 answerButtonSelectedB.classList.add("wrongAnswer");
             }
-            if (transformedData[8].questions[next].answers[2].valid==true){
+            if (transformedData[theQuiz].questions[next].answers[2].valid==true){
                 answerButtonSelectedC.classList.add("rightAnswer");
                 if(selectCountC==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[8].questions[next].answers[2].valid==false && selectCountC==1){
+            if (transformedData[theQuiz].questions[next].answers[2].valid==false && selectCountC==1){
                 answerButtonSelectedC.classList.add("wrongAnswer");
             }
-            if (transformedData[8].questions[next].answers[3].valid==true){
+            if (transformedData[theQuiz].questions[next].answers[3].valid==true){
                 answerButtonSelectedD.classList.add("rightAnswer");
                 if(selectCountD==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[8].questions[next].answers[3].valid==false && selectCountD==1){
+            if (transformedData[theQuiz].questions[next].answers[3].valid==false && selectCountD==1){
                 answerButtonSelectedD.classList.add("wrongAnswer");
             }
             resetSelectCount();
