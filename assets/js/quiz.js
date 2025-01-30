@@ -3,10 +3,13 @@ const answerButtonSelectedA=document.getElementById("answerButtonSelectedA");
 const answerButtonSelectedB=document.getElementById("answerButtonSelectedB");
 const answerButtonSelectedC=document.getElementById("answerButtonSelectedC");
 const answerButtonSelectedD=document.getElementById("answerButtonSelectedD");
+const answerButton=document.getElementById("answerButton");
+const suivant=document.getElementById("suivant");
 let selectCountA=0;
 let selectCountB=0;
 let selectCountC=0;
 let selectCountD=0;
+let answerButtonCount=0;
 answerButtonSelectedA.addEventListener("click",()=>{
     answerButtonSelectedA.classList.toggle("answerButtonSelected");
     answerButtonSelectedA.classList.toggle("answerButton");
@@ -74,7 +77,6 @@ let tAnswer={
     c:0,
     d:0,
 }
-const answerButton=document.getElementById("answerButton");
 answerButton.addEventListener("click",()=>{
     answerButtonSelectedA.classList.remove("rightAnswer");
     answerButtonSelectedB.classList.remove("rightAnswer");
@@ -110,7 +112,7 @@ answerButton.addEventListener("click",()=>{
     }
     resetSelectCount();
     answerButton.disabled=true
-    answerButtonCount=1
+    answerButtonCount=1 //? permet de bloquer le bouton validé pour ne pas pouvoir répondre a nouveau au quiz et fausser le résultat
 });
 function resetSelectCount(){
     selectCountA=0;
@@ -121,11 +123,17 @@ function resetSelectCount(){
 //! fonction pour activer/desactiver le bouton Valider
 answerButton.disabled=true;
 function enabledAnswerButton(){
-    if(selectCountA==1||selectCountB==1||selectCountC==1||selectCountD==1){
-        answerButton.disabled=false;
+    if (answerButtonCount==0){
+        if(selectCountA==1||selectCountB==1||selectCountC==1||selectCountD==1){
+         answerButton.disabled=false;
+        }
+    }
+    else{
+        answerButton.disabled=true;
     }
 }
 //! fonction pour faire apparaitre le bouton suivant
-const suivant=document.getElementById("suivant");
 suivant.disabled=true;
 answerButton.addEventListener("click",()=>suivant.disabled=false);
+//! fonctions du bouton suivant
+suivant.addEventListener("click",()=>answerButtonCount=0);
