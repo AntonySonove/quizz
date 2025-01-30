@@ -7,6 +7,11 @@
 @import url(statistique.css);
 @import url(modif-info.css);
 @import url(resultat-quizz.css);
+@import url(mdpoublie.css);
+@import url(creercompte.css);
+@import url(confirmation.css);
+@import url(confmdpoublie.css);
+
 
 :root {
     --violet: #46178F;
