@@ -10,16 +10,17 @@
     <title>QuizAttack</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../img/icone/favicoquiz.ico">
+    <script src="../js/mdpoublie.js" defer ></script>
 </head>
 
 <body>
     <header>
         <nav class="nav-container">
-            <a href="../../index.html"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
+            <a href="/index.html"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
             <ul class="nav-list">
-                <li><a class="nav-list__item" href="statistique.html">Statistiques</a></li>
-                <li class="nav-list__item"><a href="seconnecter.html">Se connecter</a></li>
-                <li class="nav-list__item"><a href="#">Créer compte</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/statistique.html">Statistiques</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/seconnecter.html">Se connecter</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/creercompte.html">Créer compte</a></li>
             </ul>
         </nav>
     </header>
@@ -28,18 +29,23 @@
         <h1 class="cadre-login__titre"> Mot de passe oublié ? </h1>
 
         <div class = "cadre-login__mdpoublie__soustitre">
-            <h2 class="cadre-login__soustitre__texte"> E-mail : </h2>
-            <input type="text" class="cadre-login__soustitre__input" style="width: 450px; height: 40px" placeholder=""/>
+            <label for="email" class="cadre-login__soustitre__texte"> E-mail : </label>
+            <input type="text" id="mail" class="cadre-login__soustitre__input" style="width: 450px; height: 40px" placeholder=""/>
         </div>
 
         <div class="cadre-login__soustitre__submit">
-            <input type="submit" value="Confirmer" a href="#" style="width: 450px; height: 60px" class="cadre-login__soustitre__submit__texte">
+            <input type="submit" value="Confirmer" a href="./confmdpoublie.html" style="width: 450px; height: 60px" class="cadre-login__soustitre__submit__texte">
         </div>
 
         <div class = "cadre-login__creer">
             <a href="creercompte.html" class = "cadre-login__creer__texte"> Créer un compte</a>
         </div>
     </div>
+
+    <footer>
+        <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
+    </footer>
+    
 </body>
 
 </html>
