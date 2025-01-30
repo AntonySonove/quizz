@@ -78,20 +78,23 @@ function selectCategories(data) {
 
 // CREATE DESCRIPTION-QUIZ PAGE
 
-const descriptionTitle = document.querySelector('.description-title');
+//TODO const descriptionTitle = document.querySelector('.description-title');
 
-quizContainer.addEventListener('click', (e) => {
-    if (e.target.parentElement.classList.contains('quiz-card-container')) {
-        console.log(e.target.querySelector('.quiz-card__title').innerText);
-        sessionStorage.setItem("quiz", e.target.querySelector('.quiz-card__title').innerText);
+// quizContainer.addEventListener('click', (e) => {
+//     if (e.target.parentElement.classList.contains('quiz-card-container')) {
+//         console.log(e.target.querySelector('.quiz-card__title').innerText);
+//         sessionStorage.setItem("quiz", e.target.querySelector('.quiz-card__title').innerText);
 
         
-    }
-    if (e.target.parentElement.parentElement.classList.contains('quiz-card-container')) {
-        if (e.target.classList.contains('quiz-card__title')) {
-            console.log(e.target.innerText)
-        } else {
-            console.log(e.target.parentElement.querySelector('.quiz-card__title').innerText)
-        }
-    }
-})
+//     }
+//     if (e.target.parentElement.parentElement.classList.contains('quiz-card-container')) {
+//         if (e.target.classList.contains('quiz-card__title')) {
+//             console.log(e.target.innerText)
+//         } else {
+//             console.log(e.target.parentElement.querySelector('.quiz-card__title').innerText)
+//         }
+//     }
+// })
+
+
+
