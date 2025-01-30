@@ -212,7 +212,7 @@ contactApi9();
 
 const contactApi10 = async () => {
     try {
-        const recupApi = await fetch('https://quizz.adrardev.fr/api/quizz/all');
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/quizzs/all');
         console.log(recupApi);
         if (!recupApi.ok || recupApi.status !== 200) {
             console.error("Erreur lors de la récupération des données : ", recupApi.statusText);
@@ -230,3 +230,28 @@ const contactApi10 = async () => {
     }
 };
 contactApi10();
+
+
+data = {}
+
+
+async function postData(url , method) {
+
+    try {
+      const response = await fetch(url, {method: method});
+        credentials: "include"
+      if (!response.ok) {
+        // Logue la réponse complète pour mieux comprendre l'erreur
+        const errorBody = await response.text();
+        throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorBody}`);
+      }
+  
+      const transformedData1 = await response.json();
+        console.log(transformedData1);
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  }
+  
+
+  postData("https://quizz.adrardev.fr/api/quizz","POST");
