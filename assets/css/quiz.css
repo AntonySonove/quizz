@@ -1,3 +1,7 @@
+#resultContainer {
+    display: none;
+}
+
 .kanit{
     font-family: var(--police-texte);
 }
