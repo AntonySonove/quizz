@@ -1,0 +1,16 @@
+.containerresultat{
+    width: 1200px;
+    background-color: var(--gris-clair);
+    margin: auto;
+    padding: 100px;
+    margin-top: 100px;
+    h1{
+        font-family: var(--police-titre);
+    }
+}
+
+.containerresultat__titre{
+    border: solid 1 px;
+    background-color: var(--jaune);
+    
+}
