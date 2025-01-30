@@ -1,3 +1,7 @@
+#resultContainer {
+    display: none;
+}
+
 .kanit{
     font-family: var(--police-texte);
 }
@@ -201,4 +205,15 @@
     cursor: default;
     padding-right: 5px;
     transition: 0.3s;
+}
+.wrongAnswer:hover{
+    height: 60px;
+    background-color: var(--red);
+    width: 100%;
+    cursor: default;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+.resultContainerNone{
+    display: none;
 }
