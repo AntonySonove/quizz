@@ -11,8 +11,8 @@ let selectCountC=0;
 let selectCountD=0;
 let answerButtonCount=0;
 answerButtonSelectedA.addEventListener("click",()=>{
-    answerButtonSelectedA.classList.toggle("answerButtonSelected");
-    answerButtonSelectedA.classList.toggle("answerButton");
+    answerButtonSelectedA.classList.add("answerButtonSelected");
+    answerButtonSelectedA.classList.remove("answerButton");
     answerButtonSelectedB.classList.add("answerButton");
     answerButtonSelectedC.classList.add("answerButton");
     answerButtonSelectedD.classList.add("answerButton");
@@ -136,4 +136,26 @@ function enabledAnswerButton(){
 suivant.disabled=true;
 answerButton.addEventListener("click",()=>suivant.disabled=false);
 //! fonctions du bouton suivant
-suivant.addEventListener("click",()=>answerButtonCount=0);
+suivant.addEventListener("click",()=>{
+    answerButtonSelectedA.classList.remove("rightAnswer");
+    answerButtonSelectedB.classList.remove("rightAnswer");
+    answerButtonSelectedC.classList.remove("rightAnswer");
+    answerButtonSelectedD.classList.remove("rightAnswer");
+    answerButtonSelectedA.classList.remove("wrongAnswer");
+    answerButtonSelectedB.classList.remove("wrongAnswer");
+    answerButtonSelectedC.classList.remove("wrongAnswer");
+    answerButtonSelectedD.classList.remove("wrongAnswer");
+    answerButtonSelectedA.classList.remove("answerButtonSelected");
+    answerButtonSelectedA.classList.add("answerButton");
+    answerButtonSelectedB.classList.remove("answerButtonSelected");
+    answerButtonSelectedB.classList.add("answerButton");
+    answerButtonSelectedC.classList.remove("answerButtonSelected");
+    answerButtonSelectedC.classList.add("answerButton");
+    answerButtonSelectedD.classList.remove("answerButtonSelected");
+    answerButtonSelectedD.classList.add("answerButton");
+    selectCountA=0;
+    selectCountB=0;
+    selectCountC=0;
+    selectCountD=0;
+    answerButtonCount=0
+});
