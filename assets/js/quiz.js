@@ -1,8 +1,3 @@
-const data = sessionStorage.getItem("quizObj");
-const chosenQuiz = JSON.parse(data);
-
-let chosenIndex = chosenQuiz.id - 1;
-
 //! récupération de l'API pour les questions
 const contactApi10 = async () => {
     try {
@@ -14,31 +9,31 @@ const contactApi10 = async () => {
         }
         const transformedData = await recupApi.json();
         // console.log(transformedData);
-        // console.log(transformedData[chosenIndex]);
+        // console.log(transformedData[8]);
         //! récupération des données pour les questions et réponses
         //* question 1
-        console.log(transformedData[chosenIndex].questions); //? liste des questions
-        // console.log(transformedData[chosenIndex].questions.length);
-        // console.log(transformedData[chosenIndex].questions[0].description); //? nom de la question
-        // console.log(transformedData[chosenIndex].questions[0].answers);//? liste des réponses
-        // console.log(transformedData[chosenIndex].questions[0].answers[0]); //? utiliser "valid" pour le compteur de bonnes réponses
-        // console.log(transformedData[chosenIndex].questions[0].answers[0].valid); //? valeur true pour la bonne réponse
-        // console.log(transformedData[chosenIndex].questions[0].answers[0].text); //? texte de la bonne réponse
+        console.log(transformedData[8].questions); //? liste des questions
+        // console.log(transformedData[8].questions.length);
+        // console.log(transformedData[8].questions[0].description); //? nom de la question
+        // console.log(transformedData[8].questions[0].answers);//? liste des réponses
+        // console.log(transformedData[8].questions[0].answers[0]); //? utiliser "valid" pour le compteur de bonnes réponses
+        // console.log(transformedData[8].questions[0].answers[0].valid); //? valeur true pour la bonne réponse
+        // console.log(transformedData[8].questions[0].answers[0].text); //? texte de la bonne réponse
         // //* question 2
-        // console.log(transformedData[chosenIndex].questions[1].description);
-        // console.log(transformedData[chosenIndex].questions[1].answers);
-        // console.log(transformedData[chosenIndex].questions[1].answers[0]);
-        // console.log(transformedData[chosenIndex].questions[1].answers[0].text);
+        // console.log(transformedData[8].questions[1].description);
+        // console.log(transformedData[8].questions[1].answers);
+        // console.log(transformedData[8].questions[1].answers[0]);
+        // console.log(transformedData[8].questions[1].answers[0].text);
         // //* question 3
-        // console.log(transformedData[chosenIndex].questions[2].description);
-        // console.log(transformedData[chosenIndex].questions[2].answers);
-        // console.log(transformedData[chosenIndex].questions[2].answers[2]);
-        // console.log(transformedData[chosenIndex].questions[2].answers[2].text);
+        // console.log(transformedData[8].questions[2].description);
+        // console.log(transformedData[8].questions[2].answers);
+        // console.log(transformedData[8].questions[2].answers[2]);
+        // console.log(transformedData[8].questions[2].answers[2].text);
         // //* question 4
-        // console.log(transformedData[chosenIndex].questions[3].description);
-        // console.log(transformedData[chosenIndex].questions[3].answers);
-        // console.log(transformedData[chosenIndex].questions[3].answers[3]);
-        // console.log(transformedData[chosenIndex].questions[3].answers[3].text);
+        // console.log(transformedData[8].questions[3].description);
+        // console.log(transformedData[8].questions[3].answers);
+        // console.log(transformedData[8].questions[3].answers[3]);
+        // console.log(transformedData[8].questions[3].answers[3].text);
        
         
         //! variables
@@ -57,7 +52,7 @@ const contactApi10 = async () => {
         //* variable pour les questions
         const questionNumber= document.getElementById("questionNumber");
         const questionName=document.getElementById("questionName");
-        let questionNumberCount=transformedData[chosenIndex].questions.length-transformedData[chosenIndex].questions.length+1;
+        let questionNumberCount=transformedData[8].questions.length-transformedData[8].questions.length+1;
         const textAnswerA=document.getElementById("textAnswerA");
         const textAnswerB=document.getElementById("textAnswerB");
         const textAnswerC=document.getElementById("textAnswerC");
@@ -70,16 +65,16 @@ const contactApi10 = async () => {
         
         //! application des question/réponses sur le html
         function nextQuestion(next){
-            if (next==transformedData[chosenIndex].questions.length){
-                result.innerText=`${score}/${transformedData[chosenIndex].questions.length}`;
+            if (next==transformedData[8].questions.length){
+                result.innerText=`${score}/${transformedData[8].questions.length}`;
             }
             else{
-            questionNumber.innerText=`${questionNumberCount}/${transformedData[chosenIndex].questions.length}`
-            questionName.innerText=transformedData[chosenIndex].questions[next].description;
-            textAnswerA.innerText=transformedData[chosenIndex].questions[next].answers[0].text;
-            textAnswerB.innerText=transformedData[chosenIndex].questions[next].answers[1].text;
-            textAnswerC.innerText=transformedData[chosenIndex].questions[next].answers[2].text;
-            textAnswerD.innerText=transformedData[chosenIndex].questions[next].answers[3].text;
+            questionNumber.innerText=`${questionNumberCount}/${transformedData[8].questions.length}`
+            questionName.innerText=transformedData[8].questions[next].description;
+            textAnswerA.innerText=transformedData[8].questions[next].answers[0].text;
+            textAnswerB.innerText=transformedData[8].questions[next].answers[1].text;
+            textAnswerC.innerText=transformedData[8].questions[next].answers[2].text;
+            textAnswerD.innerText=transformedData[8].questions[next].answers[3].text;
             }
         }
         //! Fonctions pour le visuel d'une réponse sélectionnée
@@ -153,44 +148,44 @@ const contactApi10 = async () => {
             answerButtonSelectedB.classList.remove("wrongAnswer");
             answerButtonSelectedC.classList.remove("wrongAnswer");
             answerButtonSelectedD.classList.remove("wrongAnswer");
-            if (transformedData[chosenIndex].questions[next].answers[0].valid==true){
+            if (transformedData[8].questions[next].answers[0].valid==true){
                 answerButtonSelectedA.classList.add("rightAnswer");
                 if(selectCountA==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[chosenIndex].questions[next].answers[0].valid==false && selectCountA==1){
+            if (transformedData[8].questions[next].answers[0].valid==false && selectCountA==1){
                 answerButtonSelectedA.classList.add("wrongAnswer");
             }
-            if (transformedData[chosenIndex].questions[next].answers[1].valid==true){
+            if (transformedData[8].questions[next].answers[1].valid==true){
                 answerButtonSelectedB.classList.add("rightAnswer");
                 if(selectCountB==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[chosenIndex].questions[next].answers[1].valid==false && selectCountB==1){
+            if (transformedData[8].questions[next].answers[1].valid==false && selectCountB==1){
                 answerButtonSelectedB.classList.add("wrongAnswer");
             }
-            if (transformedData[chosenIndex].questions[next].answers[2].valid==true){
+            if (transformedData[8].questions[next].answers[2].valid==true){
                 answerButtonSelectedC.classList.add("rightAnswer");
                 if(selectCountC==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[chosenIndex].questions[next].answers[2].valid==false && selectCountC==1){
+            if (transformedData[8].questions[next].answers[2].valid==false && selectCountC==1){
                 answerButtonSelectedC.classList.add("wrongAnswer");
             }
-            if (transformedData[chosenIndex].questions[next].answers[3].valid==true){
+            if (transformedData[8].questions[next].answers[3].valid==true){
                 answerButtonSelectedD.classList.add("rightAnswer");
                 if(selectCountD==1){
                     score+=1
                     console.log(score);
                 }
             }
-            if (transformedData[chosenIndex].questions[next].answers[3].valid==false && selectCountD==1){
+            if (transformedData[8].questions[next].answers[3].valid==false && selectCountD==1){
                 answerButtonSelectedD.classList.add("wrongAnswer");
             }
             resetSelectCount();
