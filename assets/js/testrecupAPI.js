@@ -212,7 +212,7 @@ contactApi9();
 
 const contactApi10 = async () => {
     try {
-        const recupApi = await fetch('https://quizz.adrardev.fr/api/quizz/all');
+        const recupApi = await fetch('https://quizz.adrardev.fr/api/quizzs/all');
         console.log(recupApi);
         if (!recupApi.ok || recupApi.status !== 200) {
             console.error("Erreur lors de la récupération des données : ", recupApi.statusText);

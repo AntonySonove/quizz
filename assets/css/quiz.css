@@ -210,3 +210,6 @@
     padding-right: 5px;
     transition: 0.3s;
 }
+.resultContainerNone{
+    display: none;
+}

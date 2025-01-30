@@ -22,10 +22,10 @@
         <main class="mainQuiz">
             <div class="column radius10 mainQuestion">
                 <div class="yellow row alignSelf justifyCenter alignCenter radius5 textCenter dropShadow divQuestion1On10 relative50">
-                    <h5 class="text25 kanit">Question 1/10</h5>
+                    <h5 id="questionNumber" class="text25 kanit">Question 1/10</h5>
                 </div>
                 <div class="row alignSelf justifyCenter yellow radius5 dropShadow divQuestion">
-                    <h2 class="text50">Question</h2>
+                    <h2 id="questionName" class="text50">Question</h2>
                 </div>
                 <div class="row spaceBetween gap15"> 
                     <div class="dropShadow radius5 divImgQuiz">
@@ -37,25 +37,25 @@
                                 <div class="violetCircle">
                                     <p class="textWhite text35 kanit">A</p>
                                 </div>
-                                <p class="text35 kanit">coin</p>
+                                <p id="textAnswerA" class="text35 kanit">coin</p>
                             </li>
                             <li id="answerButtonSelectedB" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
                                 <div class="violetCircle">
                                     <p class="textWhite text35 kanit">B</p>
                                 </div>
-                                <p class="text35 kanit">coin</p>
+                                <p id="textAnswerB" class="text35 kanit">coin</p>
                             </li>
                             <li id="answerButtonSelectedC" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
                                 <div class="violetCircle">
                                     <p class="textWhite text35 kanit">C</p>
                                 </div>
-                                <p class="text35 kanit">coin</p>
+                                <p id="textAnswerC" class="text35 kanit">coin</p>
                             </li>
                             <li id="answerButtonSelectedD" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
                                 <div class="violetCircle">
                                     <p class="textWhite text35 kanit">D</p>
                                 </div>
-                                <p class="text35 kanit">coin</p>
+                                <p id="textAnswerD" class="text35 kanit">coin</p>
                             </li>
                         </ul>
                     </div>
@@ -71,6 +71,31 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="resultContainer" class="result-container">
+                <h1 class="result__title">C’est fini! Ton résultat est :</h1>
+                <h2 id="result"></h2>
+                <p id="text-result">Bien joué ! Vous êtes déjà au-dessus de la moyenne. Un petit effort de plus et vous toucherez l’excellence !</p>
+                <!-- <p class="result__comment-not-connected">Analysez vos statistiques et laissez vos commentaires. Il vous suffit de <a href="#">créer un compte</a> !</p> -->
+                <div class="result__note">
+                    <div class="result__note__stars-flex">
+                        <p class="result__note__stars-txt"> Que diriez-vous de noter ce quiz ?</p>
+                        <p class="result__note__stars-input">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="result__note__comment">
+                        <form class="comment-form" action="" method="">
+                            <h4 class="result__note__comment__title">Laisse ton commentaire :</h4>
+                            <div class="result__note__comment-flex">
+                                <img class="result__note__comment__img" src="../img/img_profil/ronaldinho.webp" alt="Image du profil">
+                                <textarea name="comment" id="comment"></textarea>
+                            </div>
+                            <div class="comment-btn-flex">
+                                <button id="comment-btn" type="submit">Publier</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <a class="result__return-btn" href="#">Retourner aux Quiz</a>
             </div>
         </main>
         <script src="../js/quiz.js"></script>
