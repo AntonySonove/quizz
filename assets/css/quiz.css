@@ -5,8 +5,6 @@
 .padding2{
     padding: 2% 2%;
 }
-
-
 .column{
     display: flex;
     flex-direction: column;
@@ -37,6 +35,9 @@
     gap: 15px;
 }
 .gap20{
+    gap: 20px;
+}
+.gap25{
     gap: 20px;
 }
 
@@ -84,6 +85,10 @@
     position:relative;
     bottom: -50px;
 }
+.relativeLeft{
+    position: relative;
+    left: 215px;
+}
 
 
 .mainQuiz{
@@ -103,13 +108,32 @@
     width: 70%;
     margin-bottom: 80px;
 }
+.divImgQuiz{
+    border: solid 3px var(--jaune);
+    width: 55%;
+    height: 300px;
+}
 .divAnswerButton{
     width: 45%;
 }
-.AnswerButton{
-    height:60px;
+.answerButton{
+    height: 60px;
     background-color: var(--jaune);
     width: 100%;
+    cursor: pointer;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+.answerButton:hover{
+    background-color: var(--jaune-hover);
+}
+.answerButtonSelected{
+    height: 60px;
+    background-color: var(--jaune-selected);
+    width: 100%;
+    cursor: pointer;
+    padding-right: 5px;
+    transition: 0.3s;
 }
 .violetCircle{
     background-color: var(--violet);
@@ -119,18 +143,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5px;
+}
+#answerButton:disabled{
+    background-color: #f9d80550;
+    cursor:default;
+    color: #46178F50;
+}
+.divSuivantButton{
+    height: 60px;
+}
+.emptyDivSuivantButton{
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+}
+.suivantButton{
+    max-width: 140px;
+}
+.paddingSuivant{
+    padding-left: 5px;
+}
+#suivant:disabled{
+    background-color: #f9d80550;
+    cursor:default;
+    color: #46178F50;
 }
 .goAnswer{
+    margin-top: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 .goAnswerButton{
     width: 50%;
-    margin-top: 30px;
 }
-.divImgQuiz{
-    border: solid 3px var(--jaune);
-    width: 55%;
-    height: 300px;
+.rightAnswer{
+    height: 60px;
+    background-color: var(--green);
+    width: 100%;
+    cursor: default;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+.rightAnswer:hover{
+    height: 60px;
+    background-color: var(--green);
+    width: 100%;
+    cursor: default;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+.wrongAnswer{
+    height: 60px;
+    background-color: var(--red);
+    width: 100%;
+    cursor: default;
+    padding-right: 5px;
+    transition: 0.3s;
 }

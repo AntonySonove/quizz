@@ -1,8 +1,9 @@
 @import url(accueil-search.css);
 @import url(accueil-quiz.css);
-@import url(description-quiz.css);
 @import url(seconnecter.css);
+@import url(description-quiz.css);
 @import url(quiz.css);
+@import url(resultat-quiz.css);
 @import url(statistique.css);
 @import url(modif-info.css);
 @import url(resultat-quizz.css);
@@ -11,6 +12,9 @@
     --violet: #46178F;
     --jaune: #f9d805;
     --jaune-hover: #eacb00;
+    --jaune-selected:#fff08e;
+    --green: #01d300;
+    --red:#ff7979;
     --gris-clair: #f2f2f2;
     --gris-fonce: #4D4D4D;
 
@@ -32,6 +36,7 @@
 html, body {
     overflow-x: hidden;
     width: 100vw;
+    min-height: 100vh;
     height: auto;
     background: url(../img/img_background/bgviolet.webp) no-repeat center bottom;
     background-size: cover;
