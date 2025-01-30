@@ -1,42 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <title>QuizAttack</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-    <header>
-        <nav class="nav-container">
-            <a href="#"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
-            <ul class="nav-list">
-                <li><a href="#">Se connecter</a></li>
-                <li><a href="#">Créer compte</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="mainQuiz">
-        <div class="column radius10 mainQuestion">
-            <div class="yellow row alignSelf justifyCenter alignCenter radius5 textCenter dropShadow divQuestion1On10 relative50"><h5 class="text25 kanit">Question1/10</h5></div>
-            <div class="row alignSelf justifyCenter yellow radius5 dropShadow divQuestion"><h2 class="text50">Question</h2></div>
-            <div class="row spaceBetween gap15"> 
-                <div class="dropShadow radius5 divImgQuiz"><img src="" alt="imgQuestion" width="100%" height="100%"></div>
-                <div class="column justifyCenter gap20 divAnswerButton">
-                    <div class="leftRadius dropShadow"><button class="row spaceBetween alignCenter padding2 radius5 leftRadius AnswerButton"><div class="violetCircle"><p class="textWhite text35 kanit">A</p></div><p class="text35 kanit">coin</p></button></div>
-                    <div class="leftRadius dropShadow"><button class="row spaceBetween alignCenter padding2 radius5 leftRadius AnswerButton"><div class="violetCircle"><p class="textWhite text35 kanit">B</p></div><p class="text35 kanit">coin coin</p></button></div>
-                    <div class="leftRadius dropShadow"><button class="row spaceBetween alignCenter padding2 radius5 leftRadius AnswerButton"><div class="violetCircle"><p class="textWhite text35 kanit">C</p></div><p class="text35 kanit">coin coin coin</p></button></div>
-                    <div class="leftRadius dropShadow"><button class="row spaceBetween alignCenter padding2 radius5 leftRadius AnswerButton"><div class="violetCircle"><p class="textWhite text35 kanit">D</p></div><p class="text35 kanit">cocorico</p></button></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <title>QuizAttack</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-container">
+                <a href="#"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
+                <ul class="nav-list">
+                    <li><a href="#">Se connecter</a></li>
+                    <li><a href="#">Créer compte</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="mainQuiz">
+            <div class="column radius10 mainQuestion">
+                <div class="yellow row alignSelf justifyCenter alignCenter radius5 textCenter dropShadow divQuestion1On10 relative50">
+                    <h5 class="text25 kanit">Question 1/10</h5>
+                </div>
+                <div class="row alignSelf justifyCenter yellow radius5 dropShadow divQuestion">
+                    <h2 class="text50">Question</h2>
+                </div>
+                <div class="row spaceBetween gap15"> 
+                    <div class="dropShadow radius5 divImgQuiz">
+                        <img src="" alt="imgQuestion" width="100%" height="100%">
+                    </div>
+                    <div class="column justifyCenter gap20 divAnswerButton">
+                        <ul class="column gap25">
+                            <li id="answerButtonSelectedA" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
+                                <div class="violetCircle">
+                                    <p class="textWhite text35 kanit">A</p>
+                                </div>
+                                <p class="text35 kanit">coin</p>
+                            </li>
+                            <li id="answerButtonSelectedB" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
+                                <div class="violetCircle">
+                                    <p class="textWhite text35 kanit">B</p>
+                                </div>
+                                <p class="text35 kanit">coin</p>
+                            </li>
+                            <li id="answerButtonSelectedC" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
+                                <div class="violetCircle">
+                                    <p class="textWhite text35 kanit">C</p>
+                                </div>
+                                <p class="text35 kanit">coin</p>
+                            </li>
+                            <li id="answerButtonSelectedD" class="leftRadius dropShadow answerButton row spaceBetween alignCenter radius5 leftRadius">
+                                <div class="violetCircle">
+                                    <p class="textWhite text35 kanit">D</p>
+                                </div>
+                                <p class="text35 kanit">coin</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row spaceBetween alignCenter goAnswer divSuivantButton relative-50">
+                    <div class="emptyDivSuivantButton"></div>
+                    <div class="dropShadow radius5 goAnswerButton">
+                        <button id="answerButton" class="radius5 text35 answerButton">Valider</button>
+                    </div>
+                    <div class="emptyDivSuivantButton">
+                        <div class="dropShadow radius5 suivantButton">
+                            <button id="suivant" class="radius5 text35 answerButton paddingSuivant">Suivant</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="goAnswer relative-50"><div class="dropShadow radius5 goAnswerButton"><button class="radius5 text35 AnswerButton">Valider</button></div></div>
-        </div>
-    </main>
-</body>
-
+        </main>
+        <script src="../js/quiz.js"></script>
+    </body>
 </html>
