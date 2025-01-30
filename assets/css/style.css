@@ -5,6 +5,10 @@
 @import url(quiz.css);
 @import url(resultat-quiz.css);
 @import url(statistique.css);
+@import url(mdpoublie.css);
+@import url(creercompte.css);
+@import url(confirmation.css);
+@import url(confmdpoublie.css);
 
 :root {
     --violet: #46178F;
