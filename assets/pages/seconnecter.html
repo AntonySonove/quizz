@@ -16,10 +16,11 @@
 <body>
     <header>
         <nav class="nav-container">
-            <a href="#"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
+            <a href="/index.html"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
             <ul class="nav-list">
-                <li class="nav-listitem"><a href="../pages/seconnecter.html">Se connecter</a></li>
-                <li class="nav-listitem"><a href="../pages/creercompte.html">Créer compte</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/statistique.html">Statistiques</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/seconnecter.html">Se connecter</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/creercompte.html">Créer compte</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +36,7 @@
         <div class ="cadre-login__soustitre">
             <label for="mdp" class="cadre-login__soustitre__texte"> Mot de passe :</label>
             <input type="text" id="password" class="cadre-login__soustitre__input" style="width: 450px; height: 40px" placeholder=""/>
-            <p id='messageMdp' class="cadre-login__soustitre__message" style="width: 400px; align-self: center; margin: 0;">*Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.</p>
+            <p id='messageMdp' class="cadre-login__soustitre__message" style="width: 400px; align-self: center; margin: 0;">*Le mot de passe n'est pas correct.</p>
         </div>
 
         <div class="cadre-login__soustitre__checkbox">
@@ -54,6 +55,11 @@
             <a href="creercompte.html" class = "cadre-login__creer__texte"> Créer un compte</a>
         </div>
     </div>
+
+    <footer>
+        <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
+    </footer>
+    
 </body>
 
 </html>
