@@ -2,9 +2,9 @@
 
 class ViewHeader
 {
-  public function displayView(): string
-  {
-    return ("
+    public function displayView(): string
+    {
+        return ("
     <!DOCTYPE html>
     <html lang='en'>
 
@@ -16,20 +16,20 @@ class ViewHeader
             href='https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
             rel='stylesheet'>
         <title>QuizAttack</title>
-        <link rel='stylesheet' href='assets/css/style.css'>
+        <link rel='stylesheet' href='../../css/style.css'>
     </head>
 
     <body>
     <header>
         <nav class='nav-container'>
-            <a href='index.html'><img class='logo' src='assets/img/logo.png' alt='Logo QuizAttack'></a>
+            <a href='#'><img class='logo' src='../../assets/img/logo.png' alt='Logo QuizAttack'></a>
             <ul class='nav-list'>
-                <li><a class='nav-list__item' href='./assets/pages/statistique.html'>Statistiques</a></li>
-                <li><a class='nav-list__item' href='./assets/pages/seconnecter.html'>Se connecter</a></li>
-                <li><a class='nav-list__item' href='./assets/pages/creercompte.html'>Créer compte</a></li>
+                <li><a class='nav-list__item' href='#'>Statistiques</a></li>
+                <li><a class='nav-list__item' href='#'>Se connecter</a></li>
+                <li><a class='nav-list__item' href='#'>Créer compte</a></li>
             </ul>
         </nav>
     </header>
     ");
-  }
+    }
 }
