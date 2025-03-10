@@ -1,8 +1,9 @@
 <?php
 include("controllerAccount");
 include("viewHeader");
+include("modelinscription");
 include("viewFooter");
-class ViewHeader{
+class ViewSignUp{
 
 //METHOD
 public function displayView():string{
@@ -57,4 +58,7 @@ public function displayView():string{
             <p>ok</p>';
         }
     }
+
+    $viewSignUp = new ViewSignUp();
+    echo $viewSignUp->displayView();
 ?>

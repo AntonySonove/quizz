@@ -6,18 +6,18 @@ session_start();
 
 
 class ControllerAccount {
-    private ?ViewAccount $viewAccount;
+    private ?SignUp $SignUp;
 
     //CONSTRUCTEUR
-    public function __construct(?ViewAccount $viewAccount){
+    public function __construct(?SignUp $SignUp){
         $this->setHeader(new ViewHeader());
         $this->setFooter(new ViewFooter());
-        $this->viewAccount = $viewAccount;
+        $this->SignUp = $SignUp;
     }
     
     //GETTER ET SETTER
-    public function getViewAccount(): ?ViewAccount { return $this->viewAccount; }
-    public function setViewAccount(?ViewAccount $viewAccount): self { $this->viewAccount = $viewAccount; return $this; }
+    public function getSignUp(): ?SignUp { return $this->SignUp; }
+    public function setSignUp(?SignUp $SignUp): self { $this->SignUp = $SignUp; return $this; }
 
     //METHOD
     public function render():void{
@@ -30,10 +30,10 @@ class ControllerAccount {
 
         //Si je suis connecté, j'affiche les différentes views
         echo $this->getHeader()->displayView();
-        echo $this->getViewAccount()->displayView();
+        echo $this->getHome()->displayView();
         echo $this->getFooter()->displayView();
     }
 }
 
-$account = new ControllerAccount(new ViewAccount());
+$account = new ControllerAccount(new SignUp());
 $account->render();
