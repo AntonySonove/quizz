@@ -33,11 +33,7 @@ class ControllerScore{
     public function setFooter(?ViewFooter $footer): self { $this->footer = $footer; return $this; }
 
     //! method
-    // public function render(){
-    //     echo $this->getHeader()->displayView();
-    //     echo $this->getViewScore()->displayView();
-    //     echo $this->getFooter()->displayView();
-    // }
+  
 
     public function render():void{
         {

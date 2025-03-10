@@ -186,6 +186,7 @@ class ViewScore{
                     </tr>
                 </table>
             </main>
+            
             ';
     }
 }
