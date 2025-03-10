@@ -1,25 +1,24 @@
-.infocontainer{
+.infocontainer {
     width: 1200px;
     background-color: var(--gris-clair);
     margin: auto;
     padding: 100px;
     margin-top: 100px;
 
-    h1{
+    h1 {
         text-align: center;
         font-family: var(--police-titre);
         font-size: 35px;
     }
 
-    .infocontainer__sectioninfo{
+    .infocontainer__sectioninfo {
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 70%;
         margin: auto;
 
-
-        input{
+        input {
             padding: 10px;
             border-radius: 10px;
             font-family: var(--police-texte);
@@ -28,7 +27,7 @@
             box-shadow: var(--shadow);
         }
 
-        button{
+        button {
             background-color: var(--jaune);
             padding: 5px;
             border-radius: 10px;
@@ -38,26 +37,26 @@
             border: none;
         }
 
-        button:hover{
+        button:hover {
             background-color: var(--jaune-hover);
         }
 
-        label{
+        label {
             color: var(--gris-fonce);
             font-family: var(--police-texte);
             font-size: 24px;
         }
-        
-        a{
+
+        a {
             font-size: 20px;
             list-style: none;
             color: var(--violet);
             padding-top: 10px;
             text-align: center;
-            font-family: var(--police-texte)
+            font-family: var(--police-texte);
         }
-        messageMdp{
-            font-family: var(--police-texte)
+        messagepassword {
+            font-family: var(--police-texte);
         }
     }
 }

@@ -9,7 +9,7 @@ page
 
 page d'acceuil connecter et non connecter (api catégorie)
 connexion(regex)
-mdp oublié (regex)
+password oublié (regex)
 créer un compte (regex)
 confirmation par e-mail
 modif infos (regex)
