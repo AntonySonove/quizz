@@ -5,13 +5,12 @@ session_start();
 //Import des ressources
 
 
-class ControllerAccount {
+class ControllerSignUp {
     private ?SignUp $SignUp;
 
     //CONSTRUCTEUR
     public function __construct(?SignUp $SignUp){
-        $this->setHeader(new ViewHeader());
-        $this->setFooter(new ViewFooter());
+        
         $this->SignUp = $SignUp;
     }
     
@@ -29,11 +28,11 @@ class ControllerAccount {
         }
 
         //Si je suis connecté, j'affiche les différentes views
-        echo $this->getHeader()->displayView();
-        echo $this->getHome()->displayView();
-        echo $this->getFooter()->displayView();
+        
+        // echo $this->getHome()->displayView();
+        
     }
 }
 
-$account = new ControllerAccount(new SignUp());
-$account->render();
+$signUp = new controllerSignUp(new SignUp());
+$signUp->render();

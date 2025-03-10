@@ -1,4 +1,5 @@
 <?php
+include("utils.php");
 include("controllerAccount");
 include("viewHeader");
 include("modelinscription");
