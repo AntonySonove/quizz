@@ -6,7 +6,6 @@ class ModelUser
     private ?string $firstname;
     private ?string $lastname;
     private ?string $email;
-    private ?string $roles;
     private ?string $password;
     private ?PDO $bdd;
 
@@ -51,15 +50,6 @@ class ModelUser
         $this->email = $email;
         return $this;
     }
-    public function getRoles(): ?string
-    {
-        return $this->roles;
-    }
-    public function setRoles(?string $roles): self
-    {
-        $this->roles = $roles;
-        return $this;
-    }
 
     public function getPassword(): ?string
     {
@@ -87,22 +77,21 @@ class ModelUser
     {
         try {
             //REQUETE PREPAREE
-            $req = $this->getBdd()->prepare('INSERT INTO users (firstname, lastname, roles, email, password) VALUES (?,?,?,?,?)');
+            $req = $this->getBdd()->prepare('INSERT INTO users (firstname, lastname, email, `password`) VALUES (?,?,?,?)');
 
             //Récupération des données de l'objet
-            $firstname = $this->getfirstname();
-            $lastname = $this->getlastname();
+            $firstname = $this->getFirstname();
+            $lastname = $this->getLastname();
+            // $role = $this->getRoles();
             $email = $this->getEmail();
-            $roles = $this->getRoles();
             $password = $this->getPassword();
 
             //BINDPARAM
             $req->bindParam(1, $firstname, PDO::PARAM_STR);
-            $req->bindParam(2, $lastname, PDO::PARAM_STR);
-            $req->bindParam(2, $email, PDO::PARAM_STR);
-            $req->bindParam(3, $roles, PDO::PARAM_STR);
-            $req->bindParam(3, $password, PDO::PARAM_STR);
-
+            $req->bindValue(2, $lastname, PDO::PARAM_STR);
+            // $req->bindParam(3, $role, PDO::PARAM_STR);
+            $req->bindParam(3, $email, PDO::PARAM_STR);
+            $req->bindParam(4, $password, PDO::PARAM_STR);
 
             //Execution de la requête
             $req->execute();
@@ -110,6 +99,21 @@ class ModelUser
             return "$firstname a été enregistré avec succès.";
         } catch (EXCEPTION $error) {
             return $error->getMessage();
+        }
+    }
+
+    public function getByEmail(): array | string
+    {
+        try {
+            $req = $this->getBdd()->prepare("SELECT id_users, `firstname`, lastname, email, `password` FROM users WHERE email = ? LIMIT 1");
+            $email = $this->getEmail();
+            $req->bindParam(1, $email, PDO::PARAM_STR);
+            $req->execute();
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            return $data;
+        } catch (EXCEPTION $e) {
+            return $e->getMessage();
         }
     }
 }
