@@ -113,9 +113,9 @@ class ControllerSignIn
     return $connectionMsg;
   }
 
-
   public function render(): void
   {
+
     echo $this->setViewHeader(new ViewHeader)->getViewHeader()->displayView();
 
     $this->getViewSignIn()->setMessage($this->signIn());
@@ -124,3 +124,6 @@ class ControllerSignIn
     echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
   }
 }
+
+$signIn = new ControllerSignIn(new ViewSignIn, new ModelUser);
+$signIn->render();

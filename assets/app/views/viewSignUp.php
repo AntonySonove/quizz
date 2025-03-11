@@ -61,9 +61,12 @@ class ViewSignUp
             <div class="cadre-login__oublie">
                 <a href="./mdpoublie.html" class="cadre-login__oublie__texte"> Retour </a>
             </div>
-
-
-    </main>
-            ';
+            
+        </main>
+        ';
     }
 }
+
+
+$signUp = new controllerSignUp(new ModelSignUp());
+$signUp->render();
