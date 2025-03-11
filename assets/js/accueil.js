@@ -1,7 +1,7 @@
 const quizContainer = document.querySelector('.quiz-container');
 const categoriesContainer = document.querySelector('#categories');
-let cards = [];
-let objCards = {};
+// let cards = [];
+// let objCards = {};
 
 
 // GRID DE QUIZ
@@ -21,7 +21,7 @@ const cardsHome = async () => {
         console.error("Erreur lors de l'appel à l'API : ", error);
     }
 };
-cardsHome();
+// cardsHome();
 
 function createCards(array) {
     array.forEach((item) => {
@@ -29,7 +29,7 @@ function createCards(array) {
         quizContainer.appendChild(newCard);
         newCard.setAttribute('href', 'assets/pages/description-quiz.html');
         newCard.classList.add('quiz-card-container');
-        
+
         newCard.innerHTML = `
         <article class="quiz-card">
         <img class="quiz-card__img" src="assets/img/img_quiz/${item.title}.jpg" alt="Image du quiz">
@@ -57,7 +57,7 @@ const createCategories = async () => {
         console.error("Erreur lors de l'appel à l'API : ", error);
     }
 };
-createCategories();
+// createCategories();
 
 function selectCategories(data) {
     data.forEach((item) => {
@@ -85,9 +85,7 @@ function filterCategories(categ) {
         if (categ === "Toutes") {
             cards[i].style.display = "block";
         } else {
-            const hasMatchingCategory = objCards[i].categories.some(category => category.title === categ);
-            
-            if (hasMatchingCategory) {
+            if (cards[i].classList.contains(categ)) {
                 cards[i].style.display = "block";
             } else {
                 cards[i].style.display = "none";
@@ -98,10 +96,10 @@ function filterCategories(categ) {
 
 
 
-// LIEN VERS LA PAGE SUIVANTE
+// LIEN VERS LA PAGE SUIVANTE //! =============
 
 quizContainer.addEventListener('click', (e) => {
-    const targetCard = e.target.closest('.quiz-card'); 
+    const targetCard = e.target.closest('.quiz-card');
     if (targetCard) {
         const cards = Array.from(quizContainer.querySelectorAll('.quiz-card'));
         index = cards.indexOf(targetCard);
@@ -109,11 +107,3 @@ quizContainer.addEventListener('click', (e) => {
         sessionStorage.setItem('quizObj', JSON.stringify(index));
     }
 })
-
-
-
-// const redirectToQuestionsPage = (categoryId) => {
-//     const url = new URL("assets/pages/lienapi2.html", window.location.origin); 
-//     url.searchParams.set("categoryId", categoryId); 
-//     window.location.href = url.href;
-// };

@@ -80,7 +80,8 @@ class ModelQuizz
   public function getAll(): array | string
   {
     try {
-      $req = $this->getBdd()->prepare('SELECT `nickname`, email FROM users');
+      $req = $this->getBdd()->prepare('SELECT q.id_quizz, q.title, q.`description`, q.img, c.title AS category FROM quizz q JOIN to_qualify tq ON q.id_quizz = tq.id_quizz JOIN category c ON tq.id_category = c.id_category;');
+
       $req->execute();
       $data = $req->fetchAll(PDO::FETCH_ASSOC);
 
@@ -91,7 +92,6 @@ class ModelQuizz
   }
 
 
-  //todo getByName()
-
+  // public function getByCategory(): array | string
 
 }

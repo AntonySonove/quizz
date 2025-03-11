@@ -3,7 +3,6 @@ session_start();
 
 include "../utils/utils.php";
 include "../models/modelQuizz.php";
-include "../models/modelCategories.php";
 include "../views/viewHome.php";
 include "../views/viewHeader.php";
 include "../views/viewFooter.php";
@@ -13,15 +12,13 @@ class ControllerHome
 {
     private ?ViewHome $viewHome;
     private ?ModelQuizz $modelQuizz;
-    private ?ModelCategories $modelCategories;
     private ?ViewHeader $viewHeader;
     private ?ViewFooter $viewFooter;
 
-    public function __construct(?ViewHome $newViewHome, ?ModelQuizz $newModelQuizz, ?ModelCategories $newModelCategories)
+    public function __construct(?ViewHome $newViewHome, ?ModelQuizz $newModelQuizz)
     {
         $this->viewHome = $newViewHome;
         $this->modelQuizz = $newModelQuizz;
-        $this->modelCategories = $newModelCategories;
     }
 
     public function getViewHome(): ?ViewHome
@@ -43,17 +40,6 @@ class ControllerHome
     public function setModelQuizz(?ModelQuizz $modelQuizz): self
     {
         $this->modelQuizz = $modelQuizz;
-        return $this;
-    }
-
-    public function getModelCategories(): ?ModelCategories
-    {
-        return $this->modelCategories;
-    }
-
-    public function setModelCategories(?ModelCategories $modelCategories): self
-    {
-        $this->modelCategories = $modelCategories;
         return $this;
     }
 
@@ -81,44 +67,57 @@ class ControllerHome
 
 
     //METHOD
-    public function readQuizz(): string
+    public function readQuizz(): void
     {
-        $quizzList = '';
-        $data = $this->getModelQuizz()->getAll();
+        header("Access-Control-Allow-Origin: *");
+        header("Content-type:application/json;charset=UTF-8");
+        header("Access-Control-Allow-Methods: GET");
+        header("Access-Control-Max-Age: 3600");
+        header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-        foreach ($data as $quizz) {
-            $quizzList = $quizzList . "
-            <article class='quiz-card " . $quizz['category'] . "'>
-                <img class='quiz-card__img' src='../../img/img_quiz/" . $quizz['img'] . ".jpg' alt='Image du quiz'>
+        if ($_SERVER['REQUEST_METHOD'] != 'GET') {
+            http_response_code(405);
+            echo json_encode(["message" => "Methode non autorisée. GET requis.", "Code" => 405]);
+            return;
+        }
+
+        $quizzList = [];
+
+        try {
+            $data = $this->getModelQuizz()->getAll();
+
+            foreach ($data as $quizz) {
+                $quizzList = $quizzList . "
+            <article class='quiz-card'>
+                <img class='quiz-card__img' src='assets/img/img_quiz/" . $quizz['img'] . ".jpg alt='Image du quiz'>
                 <h4 class='quiz-card__title'>" . $quizz['title'] . "</h4>
             </article>
             ";
-        }
-        return $quizzList;
-    }
+            }
 
-    public function readCategory(): string
-    {
-        $categoryList = '';
-        $data = $this->getModelCategories()->getAll();
+            http_response_code(200);
+            $tab = ['message' => 'succès ! ', 'code' => 200, 'result' => $quizzList];
+            $json = json_encode($tab);
 
-        foreach ($data as $category) {
-            $categoryList = $categoryList . "
-              <option value='" . $category['title'] . "'>" . $category['title'] . "</option>
-              ";
+            echo $json;
+
+            return;
+        } catch (EXCEPTION $error) {
+            http_response_code(500);
+            echo json_encode(["Message" => $error->getMessage(), "Code" => 500]);
+            return;
         }
-        return $categoryList;
     }
 
     public function render(): void
     {
         echo $this->setViewHeader(new ViewHeader)->getViewHeader()->displayView();
 
-        echo $this->getViewHome()->setQuizzList($this->readQuizz())->setCategoryList($this->readCategory())->displayView();
+        echo $this->getViewHome()->setQuizzList($this->readQuizz())->displayView();
 
         echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
     }
 }
 
-$home = new ControllerHome(new ViewHome(), new ModelQuizz(), new ModelCategories());
+$home = new ControllerHome(new ViewHome(), new ModelQuizz());
 $home->render();

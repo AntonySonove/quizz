@@ -3,6 +3,7 @@
 class ViewHome
 {
   private ?string $quizzList = '';
+  private ?string $categoryList = '';
 
   public function getQuizzList(): ?string
   {
@@ -15,6 +16,18 @@ class ViewHome
     return $this;
   }
 
+  public function getCategoryList(): ?string
+  {
+    return $this->categoryList;
+  }
+
+  public function setCategoryList(?string $categoryList): self
+  {
+    $this->categoryList = $categoryList;
+    return $this;
+  }
+
+
   //METHOD
   public function displayView(): string
   {
@@ -25,9 +38,9 @@ class ViewHome
                 <h3 class='search-container-flex__title'>Retrouvez un Quiz !</h3>
                 <div class='search-container__nav-bar-flex'>
                     <input class='search-container__search-bar' type='text'
-                        placeholder='Histoire, chiens, la france, c'est à toi...'>
+                        placeholder='Histoire, chiens, la france, à toi de choisir...'>
                     <div class='search-container__icon-container'>
-                        <img class='search-container__icon-container-icon' src='assets/img/icone/loupe-icon.webp'
+                        <img class='search-container__icon-container-icon' src='../../img/icone/loupe-icon.webp'
                             alt='Icone de loupe'>
                     </div>
                 </div>
@@ -37,6 +50,7 @@ class ViewHome
         <select id='categories' placeholder='Catégories'>
             <option value='Catégories' disabled selected hidden>Catégories</option>
             <option value='Toutes'>Toutes</option>
+            " . $this->getCategoryList() . "
         </select>
 
         <section class='quiz-container'>" .
