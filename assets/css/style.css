@@ -10,7 +10,8 @@
 @import url(passwordoublie.css);
 @import url(creercompte.css);
 @import url(confirmation.css);
-@import url(confpasswordoublie.css);
+@import url(confmdpoublie.css);
+@import url(userprofile.css);
 
 :root {
     --violet: #46178f;
