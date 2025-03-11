@@ -50,7 +50,7 @@ class ViewSignUp
                 <div class = "cadre-login__soustitre">
                         <label for="confirmpass" class="cadre-login__soustitre__texte"> Confirmer le mot de passe : </label>
                         <input type="password" id="confirmpass" class="cadre-login__soustitre__input" name="confirmpass"/>
-                        <p id="messagepassword" class="cadre-login__soustitre__message">*IL FAUT QUE CA SOIT LE MEME</p>
+                        <p id="messagepassword" class="cadre-login__soustitre__conditions"></p>
                 </div>    
                 
                 <div class="cadre-login__soustitre__submit">
