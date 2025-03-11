@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-include "../utils/utils.php";
-include "../models/modelQuizz.php";
-include "../models/modelCategories.php";
-include "../views/viewHome.php";
-include "../views/viewHeader.php";
-include "../views/viewFooter.php";
+include "./assets/app/utils/utils.php";
+include "./assets/app/models/modelQuizz.php";
+include "./assets/app/models/modelCategories.php";
+include "./assets/app/views/viewHome.php";
+include "./assets/app/views/viewHeader.php";
+include "./assets/app/views/viewFooter.php";
 
 
 class ControllerHome
@@ -119,6 +119,3 @@ class ControllerHome
         echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
     }
 }
-
-$home = new ControllerHome(new ViewHome(), new ModelQuizz(), new ModelCategories());
-$home->render();

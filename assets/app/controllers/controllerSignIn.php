@@ -124,6 +124,3 @@ class ControllerSignIn
     echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
   }
 }
-
-$signIn = new ControllerSignIn(new ViewSignIn, new ModelUser);
-$signIn->render();

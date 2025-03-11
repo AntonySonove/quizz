@@ -190,5 +190,3 @@ class ControllerSignUp
         }
     }
 }
-$signUp = new controllerSignUp(new ModelSignUp());
-$signUp->render();;
