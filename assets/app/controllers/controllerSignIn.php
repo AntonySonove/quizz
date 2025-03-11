@@ -9,8 +9,9 @@ include "../views/viewHeader.php";
 include "../views/viewFooter.php";
 
 
-class ControllerSignIn {
+class ControllerSignIn
+{
 
-  private ?
+  // private ?
 
 }
