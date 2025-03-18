@@ -115,6 +115,13 @@ class ControllerSignIn
     return $connectionMsg;
   }
 
+
+  public function script(): void
+  {
+    $script = "";
+    $this->getViewFooter()->setScript($script);
+  }
+
   public function render(): void
   {
 
@@ -123,7 +130,9 @@ class ControllerSignIn
     $this->getViewSignIn()->setMessage($this->signIn());
     echo $this->getViewSignIn()->displayView();
 
-    echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
+    $this->setViewFooter(new ViewFooter);
+    $this->script();
+    echo $this->getViewFooter()->displayView();
   }
 }
 

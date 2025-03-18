@@ -133,11 +133,11 @@ class ControllerSignUp
     }
 
     public function script(): void
-  {
-    $script = "<script src='../../js/creercompte.js'></script>";
-    $this->getViewFooter()->setScript($script);
-  }
-  
+    {
+        $script = "<script src='../../js/creercompte.js'></script>";
+        $this->getViewFooter()->setScript($script);
+    }
+
 
 
     public function render(): void
@@ -150,7 +150,6 @@ class ControllerSignUp
             $this->setViewFooter(new ViewFooter);
             $this->script();
             echo $this->getViewFooter()->displayView();
-            
         }
     }
 }

@@ -14,6 +14,10 @@ class ViewFooter
     $this->script = $script;
     return $this;
   }
+
+
+  //METHOD
+
   public function displayView(): string
   {
     return ("
@@ -23,7 +27,7 @@ class ViewFooter
 
 
 
-      ".$this->getScript()."
+      " . $this->getScript() . "
     </body>
     </html>
     ");

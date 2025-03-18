@@ -52,6 +52,14 @@ class ControllerUserProfile
     }
 
     //Method
+
+
+    public function script(): void
+    {
+        $script = "";
+        $this->getViewFooter()->setScript($script);
+    }
+
     public function render()
     {
         //je vérifie qu'il y a une session et que le login dans session n'est pas vide
@@ -62,7 +70,9 @@ class ControllerUserProfile
 
         echo $this->getViewUserProfile()->displayView();
 
-        echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
+        $this->setViewFooter(new ViewFooter);
+        $this->script();
+        echo $this->getViewFooter()->displayView();
     }
 }
 
