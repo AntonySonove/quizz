@@ -96,6 +96,8 @@ class ControllerSignIn
               $_SESSION['email'] = $data[0]['email'];
 
               $connectionMsg = "Vous êtes connecté(e)!";
+              header("Location: ./controllerUserProfile.php");
+              exit();
             } else {
               $connectionMsg = "Email et/ou mdp incorrect(s).";
             }
