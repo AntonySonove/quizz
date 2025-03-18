@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/icone/favicoquiz.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>QuizAttack</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html"><img class="logo" src="assets/img/logo.png" alt="Logo QuizAttack"></a>
+            <ul class="nav-list">
+                <li><a class="nav-list__item" href="./assets/pages/statistique.html">Statistiques</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/seconnecter.html">Se connecter</a></li>
+                <li><a class="nav-list__item" href="./assets/pages/creercompte.html">Créer compte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-container">
+        <div class="search-container-flex">
+            <h3 class="search-container-flex__title">Retrouvez un Quiz !</h3>
+            <div class="search-container__nav-bar-flex">
+                <input class="search-container__search-bar" type="text"
+                    placeholder="Histoire, chiens, la france, c'est à toi...">
+                <div class="search-container__icon-container">
+                    <img class="search-container__icon-container-icon" src="assets/img/icone/loupe-icon.webp"
+                        alt="Icone de loupe">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <select id="categories" placeholder="Catégories">
+        <option value="Catégories" disabled selected hidden>Catégories</option>
+        <option value="Toutes">Toutes</option>
+    </select>
+
+    <section class="quiz-container">
+        <a href="assets/pages/description-quiz.html">
+            <article class="quiz-card">
+                <img class="quiz-card__img" src="assets/img/img_question/img_test.jpg" alt="Image du quiz">
+                <h4 class="quiz-card__title">
+                    La Grèce Antique
+                </h4>
+            </article>
+        </a>
+    </section>
+
+    <footer>
+        <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
+    </footer>
+
+    <script src="assets/js/accueil.js"></script>
+    <script src="assets/js/barre-recherche.js"></script>
+</body>
+
+</html>

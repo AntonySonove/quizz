@@ -10,7 +10,7 @@
     <title>QuizAttack</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../img/icone/favicoquiz.ico">
-    <script src="../js/creercompte.js" defer ></script>
+    <script src="../js/creercompte.js" defer></script>
 </head>
 
 <body>
@@ -24,40 +24,71 @@
             </ul>
         </nav>
     </header>
-    <div class="cadre-login">
-        
-        <h1 class="cadre-login__titre"> Inscription </h1>
+    <main class="cadre-login">
 
-        <div class = "cadre-login__soustitre">
-            <label for="email" class="cadre-login__soustitre__texte"> E-mail : </label>
-            <input type="text" id="mail" class="cadre-login__soustitre__input" style="width: 450px; height: 40px" placeholder=""/>
-        </div>
+        <form method="post">
+            <h1 class="cadre-login__titre"> Inscription </h1>
 
-        <div class ="cadre-login__soustitre">
-            <label for="mdp" class="cadre-login__soustitre__texte"> Mot de passe :</label>
-            <input type="text" id="password" class="cadre-login__soustitre__input" style="width: 450px; height: 40px" placeholder=""/>
-            <p class ="cadre-login__soustitre__conditions">12 caractères minimum, au moins 1 majuscule, 1 minuscule et 1 caractère spécial (!@#$%&()_)</p>
-            </form>
-        </div>
+            <div class="cadre-login__soustitre">
+                <label for="firstname" class="cadre-login__soustitre__texte"> Nom : </label>
+                <input type="text" id="firstname" class="cadre-login__soustitre__input" name="firstname" />
+            </div>
 
-        <div class = "cadre-login__soustitre">
-            <label for="confmdp" class="cadre-login__soustitre__texte"> Confirmer le mot de passe : </label>
-            <input type="text" id="confirmpass" class="cadre-login__soustitre__input" style="width: 450px; height: 40px" placeholder=""/>
-            <p id='messageMdp' class="cadre-login__soustitre__message" style="width: 400px; align-self: center; margin: 0;">*Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.</p>
-        </div>
+            <div class="cadre-login__soustitre">
+                <label for="lastname" class="cadre-login__soustitre__texte"> Prénom : </label>
+                <input type="text" id="lastname" class="cadre-login__soustitre__input" name="lastname" />
+            </div>
+
+            <div class="cadre-login__soustitre">
+                <label for="email" class="cadre-login__soustitre__texte"> E-mail : </label>
+                <input type="text" id="mail" class="cadre-login__soustitre__input" name="email" />
+            </div>
+
+            <div class="cadre-login__soustitre">
+                <div class="cadre-login__soustitre-flex">
+                    <label for="checkForm" class="cadre-login__soustitre__texte"> Formateur : </label>
+                    <input type="checkbox" id="checkForm" class="cadre-login__soustitre__input" name="checkForm"
+                        value="Formateur" />
+                </div>
+                <div class="cadre-login__soustitre-flex">
+                    <label for="checkStag" class="cadre-login__soustitre__texte"> Stagiaire : </label>
+                    <input type="checkbox" id="checkStag" class="cadre-login__soustitre__input" name="checkStag" />
+                </div>
+            </div>
+
+            <div class="cadre-login__soustitre">
+                <label for="password" class="cadre-login__soustitre__texte"> Mot de passe :</label>
+                <input type="text" id="password" class="cadre-login__soustitre__input" name="password" />
+                <p class="cadre-login__soustitre__conditions">12 caractères minimum, au moins 1 majuscule, 1 minuscule
+                    et 1 caractère spécial (!@#$%&()_)</p>
+            </div>
+
+            <div class="cadre-login__soustitre">
+                <label for="confpassword" class="cadre-login__soustitre__texte"> Confirmer le mot de passe : </label>
+                <input type="text" id="confirmpass" class="cadre-login__soustitre__input" name="confpassword" />
+                <p id='messagepassword' class="cadre-login__soustitre__message">*Le mot de passe doit contenir au moins
+                    8
+                    caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.</p>
+            </div>
+
+        </form>
 
         <div class="cadre-login__soustitre__submit">
-                <input type="submit" value="Continuer" a href="./confirmation.html" style="width: 450px; height: 60px" class="cadre-login__soustitre__submit__texte">
+            <input type="submit" value="Continuer" name="submit" class="cadre-login__soustitre__submit__texte">
         </div>
-        <div class = "cadre-login__oublie">
-            <a href="./mdpoublie.html" class = "cadre-login__oublie__texte"> Retour </a>
+        <div class="cadre-login__oublie">
+            <a href="./mdpoublie.html" class="cadre-login__oublie__texte"> Retour </a>
         </div>
-    </div>
+
+
+    </main>
+
+
 
     <footer>
         <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
     </footer>
-    
+
 </body>
 
 </html>
