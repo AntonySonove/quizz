@@ -110,13 +110,22 @@ class ControllerHome
         return $categoryList;
     }
 
+    public function script(): void
+    {
+        $script = "<script src='../../js/accueil.js'></script>
+                    <script src='../../js/barre-recherche.js'></script>";
+        $this->getViewFooter()->setScript($script);
+    }
+
     public function render(): void
     {
         echo $this->setViewHeader(new ViewHeader)->getViewHeader()->displayView();
 
         echo $this->getViewHome()->setQuizzList($this->readQuizz())->setCategoryList($this->readCategory())->displayView();
 
-        echo $this->setViewFooter(new ViewFooter)->getViewFooter()->displayView();
+        $this->setViewFooter(new ViewFooter);
+        $this->script();
+        echo $this->getViewFooter()->displayView();
     }
 }
 
