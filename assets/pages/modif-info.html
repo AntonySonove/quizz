@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <title>Document</title>
-    </head>
-    <body>
-        <header>
-            <nav class="nav-container">
-                <a href="../../index.html"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack" /></a>
-                <ul class="nav-list">
-                    <li><a class="nav-list__item" href="statistique.html">Statistiques</a></li>
-                    <li class="nav-list__item"><a href="seconnecter.html">Se connecter</a></li>
-                    <li class="nav-list__item"><a href="#">Créer compte</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="infocontainer">
-            <h1>Modification informations profil</h1>
-            <form class="infocontainer__sectioninfo" method="post">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="../../index.html"><img class="logo" src="../img/logo.png" alt="Logo QuizAttack"></a>
+            <ul class="nav-list">
+                <li><a class="nav-list__item" href="statistique.html">Statistiques</a></li>
+                <li class="nav-list__item"><a href="seconnecter.html">Se connecter</a></li>
+                <li class="nav-list__item"><a href="#">Créer compte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="infocontainer">
+        <h1>Modification informations profil</h1>
+            <form  class="infocontainer__sectioninfo" method="post">
+                
                 <label for="name">Nom : </label>
-                <input type="text" name="name" id="name" placeholder="votre Nom" minlength="2" />
-
+                <input type="text" name="name" id="name" placeholder="votre Nom" minlength="2" >
+              
+              
                 <label for="prenom">Prénom : </label>
-                <input type="text" name="prenom" id="prenom" placeholder="votre Prénom" minlength="2" />
-
+                <input type="text" name="prenom" id="prenom" placeholder="votre Prénom" minlength="2" >
+                
                 <label for="mail">E-mail : </label>
-                <input type="mail" name="mail" id="mail" placeholder="votre E-mail" />
-
+                <input type="mail" name="mail" id="mail" placeholder="votre E-mail" >
+               
                 <label for="password">votre mot de passe : </label>
-                <input type="password" name="password" id="password" placeholder="votre mot de passe" />
+                <input type="password" name="password" id="password" placeholder="votre mot de passe" >
 
                 <label for="newPassword">Insérer le nouveau mot de passe : </label>
-                <input type="password" name="newPassword" id="newPassword" placeholder="votre mot de passe" />
-
+                <input type="password" name="newPassword" id="newPassword" placeholder="votre mot de passe" >
+               
                 <label for="confirmNewPass">Confirmer le nouveau mot de passe : </label>
-                <input type="password" name="confirmNewPass" id="confirmNewPass" placeholder="Confirmer le mot de passe" />
-
+                <input type="password" name="confirmNewPass" id="confirmNewPass" placeholder="Confirmer le mot de passe" >
+                
+                
                 <button type="submit" id="btn-confirm-info">Confirmer</button>
                 <a href="">Retour</a>
-                <p id="messagepassword" style="width: 400px; align-self: center; margin: 0">
-                    *Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.
-                </p>
+                <p id='messageMdp' style="width: 400px; align-self: center; margin: 0;">*Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.</p>
             </form>
-        </main>
-        <footer>
-            <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
-        </footer>
-        <script src="../js/Regexmodif-info.js"></script>
-    </body>
+
+    </main>
+    <footer>
+        <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
+    </footer>
+    <script src="../js/Regexmodif-info.js"></script>
+</body>
 </html>

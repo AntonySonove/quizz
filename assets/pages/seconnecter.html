@@ -1,30 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <title>QuizAttack</title>
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="icon" type="image/x-icon" href="../img/icone/favicoquiz.ico" />
-        <script src="../js/seconnecter.js" defer></script>
-    </head>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <title>QuizAttack</title>
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="icon" type="image/x-icon" href="../img/icone/favicoquiz.ico" />
-        <script src="../js/seconnecter.js" defer></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>QuizAttack</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../img/icone/favicoquiz.ico">
+    <script src="../js/seconnecter.js" defer></script>
+</head>
 
 <body>
     <header>
@@ -39,35 +26,33 @@
     </header>
     <main class="cadre-login">
 
-            <form class="form-login" action="" method="post">
-                <div class="cadre-login__soustitre">
-                    <label for="email-login" class="cadre-login__soustitre__texte"> E-mail : </label>
-                    <input type="text" id="email-login" class="cadre-login__soustitre__input" placeholder="" />
-                </div>
+        <h1 class="cadre-login__titre"> Connexion </h1>
 
-                <div class="cadre-login__soustitre">
-                    <label for="password-login" class="cadre-login__soustitre__texte"> Mot de passe :</label>
-                    <input type="password" id="password-login" class="cadre-login__soustitre__input" placeholder="" />
-                    <p id="messageMdp" class="cadre-login__soustitre__message">*Le mot de passe n'est pas correct.</p>
-                </div>
-
-                <div class="cadre-login__soustitre__checkbox">
-                    <input type="checkbox" name="remember" id="remember" checked />
-                    <label for="remember" class="cadre-login__soustitre__checkbox__checked"> Rester connecté </label>
-                </div>
-
-                <div class="cadre-login__soustitre__submit">
-                    <input type="submit" value="Se connecter" a href="./userprofile.html" class="cadre-login__soustitre__submit__texte" />
-                </div>
-            </form>
-
-            <div class="cadre-login__oublie">
-                <a href="mdpoublie.html" class="cadre-login__oublie__texte"> Mot de passe oublié ?</a>
+        <form class="form-login" action="" method="post">
+            <div class="cadre-login__soustitre">
+                <label for="email-login" class="cadre-login__soustitre__texte"> E-mail : </label>
+                <input type="text" id="email-login" class="cadre-login__soustitre__input" placeholder="" />
             </div>
-            <br />
-            <div class="cadre-login__creer">
-                <a href="creercompte.html" class="cadre-login__creer__texte"> Créer un compte</a>
+
+            <div class="cadre-login__soustitre">
+                <label for="password-login" class="cadre-login__soustitre__texte"> Mot de passe :</label>
+                <input type="password" id="password-login" class="cadre-login__soustitre__input" placeholder="" />
+                <p id='messageMdp' class="cadre-login__soustitre__message">*Le mot de passe n'est pas correct.</p>
             </div>
+
+            <div class="cadre-login__soustitre__checkbox">
+                <input type="checkbox" name="remember" id="remember" checked>
+                <label for="remember" class="cadre-login__soustitre__checkbox__checked"> Rester connecté </label>
+            </div>
+
+            <div class="cadre-login__soustitre__submit">
+                <input type="submit" value="Se connecter" a href="./userprofile.html"
+                    class="cadre-login__soustitre__submit__texte">
+            </div>
+        </form>
+
+        <div class="cadre-login__oublie">
+            <a href="mdpoublie.html" class="cadre-login__oublie__texte"> Mot de passe oublié ?</a>
         </div>
         <br>
         <div class="cadre-login__creer">
@@ -75,8 +60,10 @@
         </div>
     </main>
 
-        <footer>
-            <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
-        </footer>
-    </body>
+    <footer>
+        <p class="footer-texte">Copyright© Antony, Lassana, Pedro et Perrine - 2025 | Tous droits réservés</p>
+    </footer>
+
+</body>
+
 </html>

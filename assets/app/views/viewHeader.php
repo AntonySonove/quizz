@@ -22,11 +22,11 @@ class ViewHeader
     <body>
     <header>
         <nav class='nav-container'>
-            <a href='/quizz/assets/app/controllers/controllerHome.php'><img class='logo' src='../../img/logo.png' alt='Logo QuizAttack'></a>
+            <a href='#'><img class='logo' src='./assets/img/logo.png' alt='Logo QuizAttack'></a>
             <ul class='nav-list'>
                 <li><a class='nav-list__item' href='#'>Statistiques</a></li>
-                <li><a class='nav-list__item' href='/quizz/assets/app/controllers/controllerSignIn.php'>Se connecter</a></li>
-                <li><a class='nav-list__item' href='/quizz/assets/app/controllers/controllerSignUp.php'>Créer compte</a></li>
+                <li><a class='nav-list__item' href='./assets/app/controllers/controllerSignIn.php'>Se connecter</a></li>
+                <li><a class='nav-list__item' href='./assets/app/controllers/controllerSignUp.php'>Créer compte</a></li>
             </ul>
         </nav>
     </header>

@@ -7,21 +7,22 @@
 @import url(statistique.css);
 @import url(modif-info.css);
 @import url(resultat-quizz.css);
-@import url(passwordoublie.css);
+@import url(mdpoublie.css);
 @import url(creercompte.css);
 @import url(confirmation.css);
 @import url(confmdpoublie.css);
 @import url(userprofile.css);
 
+
 :root {
-    --violet: #46178f;
+    --violet: #46178F;
     --jaune: #f9d805;
     --jaune-hover: #eacb00;
-    --jaune-selected: #fff08e;
+    --jaune-selected:#fff08e;
     --green: #01d300;
-    --red: #ff7979;
+    --red:#ff7979;
     --gris-clair: #f2f2f2;
-    --gris-fonce: #4d4d4d;
+    --gris-fonce: #4D4D4D;
 
     --police-titre: "Irish Grover", serif;
     --police-texte: "Kanit", serif;
@@ -38,8 +39,7 @@
     font-weight: 300;
 }
 
-html,
-body {
+html, body {
     overflow-x: hidden;
     width: 100vw;
     min-height: 100vh;
