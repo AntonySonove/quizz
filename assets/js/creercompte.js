@@ -1,8 +1,8 @@
-const email = document.getElementById('mail')
+const email = document.getElementById('email')
 const mdp = document.getElementById('password')
 const mdpComfirm = document.getElementById('confirmpass')
 const btnConfirminfo = document.querySelector('.cadre-login__soustitre__submit__texte')
-const MessageMdp = document.getElementById('messageMdp')
+const MessageMdp = document.getElementById('messagepassword')
 
 
 
@@ -34,7 +34,7 @@ btnConfirminfo.addEventListener('click',function(e){
 
     console.log('ici 1')
     if(regexMDP.test(mdp.value) && regexMDP.test(mdpComfirm.value)){
-        console.log('ok1')
+        console.log('ok1');
 
         if(mdp.value===mdpComfirm.value){
             console.log('ok2')
