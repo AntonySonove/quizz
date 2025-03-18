@@ -96,6 +96,8 @@ class ControllerSignIn
               $_SESSION['email'] = $data[0]['email'];
 
               $connectionMsg = "Vous êtes connecté(e)!";
+              header("Location: ./controllerUserProfile.php");
+              exit();
             } else {
               $connectionMsg = "Email et/ou mdp incorrect(s).";
             }
@@ -113,9 +115,9 @@ class ControllerSignIn
     return $connectionMsg;
   }
 
-
   public function render(): void
   {
+
     echo $this->setViewHeader(new ViewHeader)->getViewHeader()->displayView();
 
     $this->getViewSignIn()->setMessage($this->signIn());
