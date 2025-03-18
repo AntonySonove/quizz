@@ -1,26 +1,25 @@
 .cadre-profil__infos {
     background-color: var(--gris-clair);
-    display: flex;
+    display : flex;
     flex-direction: column;
     align-items: flex-start;
     width: 356px;
     height: 289px;
     padding: 20px;
     margin-top: 25px;
-    margin-left: 15%;
-    ;
+    margin-left: 15%;;
     border-radius: 10px;
     margin-bottom: 25px;
-    position: relative;
+    position : relative;
 }
 
 .cadre-login__infos__modif {
-    position: absolute;
-    top: 10px;
-    left: 250px;
-    width: 20px;
-    height: 20px;
-}
+        position: absolute;
+        top: 10px; 
+        left: 250px; 
+        width: 20px; 
+        height: 20px;
+    }
 
 .cadre-login__infos__photo {
     align-self: center;
@@ -46,18 +45,17 @@
 
 .cadre-login__score {
     background-color: var(--gris-clair);
-    display: flex;
+    display : flex;
     flex-direction: column;
     align-items: flex-start;
     width: 356px;
     height: 750px;
     padding: 20px;
     margin-top: 25px;
-    margin-left: 15%;
-    ;
+    margin-left: 15%;;
     border-radius: 10px;
     margin-bottom: 25px;
-    position: relative;
+    position : relative;
 }
 
 .cadre-login__score__global {
@@ -70,7 +68,7 @@
     padding-top: 5px;
     font-family: var(--police-texte);
     font-size: 35px;
-    color: var(--gris-fonce);
+    color : var(--gris-fonce);
 }
 
 .cadre-login__score__theme {
@@ -82,32 +80,31 @@
 
 .cadre-login__score__theme__score {
 
-    li {
+    li { 
         text-align: center;
         padding-top: 5px;
         font-family: var(--police-texte);
         font-size: 35px;
-        color: var(--gris-fonce);
+        color : var(--gris-fonce);
     }
 }
 
 .cadre-login__quiz {
-    background-color: var(--gris-clair);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 577px;
-    height: 1106px;
-    padding: 20px;
-    margin-top: 205px;
-    margin-right: 15%;
-    ;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+        background-color: var(--gris-clair);
+        display : flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 577px;
+        height: 1106px;
+        padding: 20px;
+        margin-top: 205px;
+        margin-right: 15%;;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        position : absolute;
+        top : 0;
+        right : 0;
+    }
 
 .cadre-login__quiz__derniersquiz {
     align-self: center;
@@ -116,19 +113,11 @@
 }
 
 .cadre-login__quiz_listequiz {
-    li {
+    li { 
         text-align: center;
         padding-top: 5px;
         font-family: var(--police-texte);
         font-size: 35px;
-        color: var(--gris-fonce);
+        color : var(--gris-fonce);
     }
-}
-
-.btn-deconnexion {
-    margin: auto;
-    color: white;
-    background-color: var(--violet);
-    padding: 10px 20px;
-    border-radius: 5px;
 }
