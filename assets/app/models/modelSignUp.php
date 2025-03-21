@@ -137,7 +137,7 @@ class ModelSignUp
       //Execution de la requête
       $req->execute();
 
-      return "$firstname a été enregistré avec succès.";
+      return "$firstname $lastname a été enregistré avec succès.";
     } catch (EXCEPTION $error) {
       return $error->getMessage();
     }

@@ -18,9 +18,10 @@ class ControllerSignUp
     private ?ViewFooter $viewFooter;
 
     //CONSTRUCTEUR
-    public function __construct(?ModelSignUp $modelSignUp)
+    public function __construct(?ModelSignUp $modelSignUp, ?ViewSignUp $viewSignUp)
     {
         $this->modelSignUp = $modelSignUp;
+        $this->viewSignUp = $viewSignUp;
     }
 
     //GETTER ET SETTER
@@ -38,11 +39,13 @@ class ControllerSignUp
     {
         return $this->viewSignUp;
     }
+
     public function setViewSignUp(?ViewSignup $viewSignUp): self
     {
         $this->viewSignUp = $viewSignUp;
         return $this;
     }
+
     public function getViewFooter(): ?ViewFooter
     {
         return $this->viewFooter;
@@ -95,11 +98,14 @@ class ControllerSignUp
                     //verification du mail
                     try {
                         $data = $this->getModelSignUp()->setEmail($email)->getByEmail();
-
                         if (empty($data)) {
                             $this->getModelSignUp()->setLastname($lastname)->setPassword($password)->setFirstname($firstname)->setEmail($email);
 
                             $data = $this->getModelSignUp()->add();
+
+                            print_r($data);
+                            $signUpMsg = $data;
+                            // $this->getViewSignUp()->setMessage($data);
                         } else {
                             $signUpMsg = "Cet adresse mail existe déjà sur un autre compte.";
                         }
@@ -144,8 +150,7 @@ class ControllerSignUp
     { {
             echo $this->setViewHeader(new ViewHeader)->getViewHeader()->displayView();
 
-            $this->signUp();
-            echo $this->setViewSignUp(new ViewSignUp)->getViewSignUp()->setMessage($this->signUp())->displayView();
+            echo $this->getViewSignUp()->setMessage($this->signUp())->displayView();
 
             $this->setViewFooter(new ViewFooter);
             $this->script();
@@ -154,5 +159,5 @@ class ControllerSignUp
     }
 }
 
-$signUp = new controllerSignUp(new ModelSignUp());
+$signUp = new controllerSignUp(new ModelSignUp(), new ViewSignUp);
 $signUp->render();
